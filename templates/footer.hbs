@@ -1,7 +1,8 @@
 <footer class="footer">
   <div class="footer-inner">
-    {{#link 'help_center'}}{{help_center.name}}{{/link}}
-
+    <div>
+      {{#link 'help_center'}}{{help_center.name}}{{/link}} | <a title="Exclaimer" href="https://www.exclaimer.com/">Exclaimer</a>
+    </div>
     <div class="footer-language-selector">
       {{#if alternative_locales}}
         <div class="dropdown language-selector" aria-haspopup="true">
