@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/** Custom Code list
+
+1-Categories
+
+**/
+
 /****** Base ******/
 * {
   box-sizing: border-box;
@@ -1055,11 +1061,27 @@ ul {
 /***** Category pages *****/
 .category-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.category-sidebar {
+  border-bottom: 1px solid #ddd;
+  flex: 1 0 15%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.category-sidebar ul{
+  border-right: 1px solid #ddd;
+}
+
+.category-sidebar .sidenav-item {
+  font-size: 0.8rem;
 }
 
 .category-content {
   flex: 1;
+  padding: 0 30px;
 }
 
 @media (min-width: 1024px) {
@@ -4035,4 +4057,115 @@ ul {
   content: "·";
   display: inline-block;
   margin: 0 5px;
+}
+
+/* -!- CUSTOM CSS -!-
+Editing this CSS is for all Custom CSS within the KB */
+
+/** 1-Categories **/
+
+.category-container{
+  flex: 0 0 100%;
+
+}
+
+@media (min-width: 1024px){
+  .category-content{
+    flex: 0 0 100%;
+  }
+}
+
+.cat-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px){
+  .cat-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+}
+
+.cat-section{
+  flex: 0 49%;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.cat-section-selected > .cat-section-title{
+  color: white;
+  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background-size: 20px;
+  background-position: right 10px center;
+  border: 1px solid #f37021;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s;
+}
+
+.cat-section-selected > .cat-section-title:hover{
+  color: white;
+  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background-size: 20px;
+  background-position: right 10px center;
+}
+
+.cat-section-selected > .cat-articles {
+  display: block;
+  border: 1px solid #cccccc;
+  border-top: 0px;
+  border-radius: 0 0 5px 5px;
+  transition: 0.3s;
+}
+
+.cat-section-title{
+  background: url($assets-plus-circle-svg) no-repeat;
+  background-size: 20px;
+  background-position: right 10px center;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #333333;
+}
+
+.cat-section-title:hover{
+  color: white;
+  background: url($assets-plus-circle-white-svg) no-repeat #f37021;
+  background-size: 20px;
+  background-position: right 10px center;
+  border-color: #f37021;
+}
+
+.cat-articles{
+  display: none;
+  margin-bottom: 10px;
+}
+
+.cat-articles > ul{
+  padding: 15px;
+}
+
+.cat-articles > ul > li.article-list-item{
+  border-color: #cccccc;
+  padding: 10px 0;
+}
+
+.cat-articles > ul > li:nth-child(n+4) { border: none; }
+
+.cat-articles > ul > li:nth-child(n+5) { display: none; }
+
+.cat-articles > .see-all-articles{
+  display: inline-block;
+  padding: 0 15px 15px 15px;
+}
+
+.cat-articles > .section-empty{
+  display: inline-block;
+  padding: 15px;
 }

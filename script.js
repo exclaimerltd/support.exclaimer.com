@@ -9,8 +9,8 @@ $(document).ready(function() {
   //Create a new instance.
   var sendsafely = new SendSafelyZendesk(dropzoneId);
   sendsafely.initialize();
-  
-  //Point Category to external link 
+
+  //Point Category to external link
 
 	$("<li><a></a></li>")
 	.find("a")
@@ -121,4 +121,9 @@ $(document).ready(function() {
     var isExpanded = this.getAttribute("aria-expanded") === "true";
     this.setAttribute("aria-expanded", !isExpanded);
   });
+
 });
+
+function classToggle($elem) {
+ $elem.classList.toggle("cat-section-selected");
+};
