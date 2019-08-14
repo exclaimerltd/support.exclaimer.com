@@ -1,7 +1,7 @@
 {
-  "name": "Live Theme",
+  "name": "Exclaimer KB",
   "author": "Zendesk",
-  "version": "0.0.1.3",
+  "version": "0.0.1.2",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
