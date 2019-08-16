@@ -1,7 +1,7 @@
 {
   "name": "Exclaimer KB",
   "author": "Zendesk",
-  "version": "0.0.1.4",
+  "version": "0.0.1.5",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
@@ -53,7 +53,7 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "Futura, 'Century Gothic', AppleGothic, sans-serif",
+          "value": "'PT Sans','Myriad Pro','Arial','Sans-Serif'",
           "options": [
             {
               "label": "System",
@@ -126,7 +126,7 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "Futura, 'Century Gothic', AppleGothic, sans-serif",
+          "value": "'PT Sans','Myriad Pro','Arial','Sans-Serif'",
           "options": [
             {
               "label": "System",
