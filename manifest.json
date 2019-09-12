@@ -1,7 +1,7 @@
 {
   "name": "Exclaimer KB",
   "author": "Zendesk",
-  "version": "0.0.2.2",
+  "version": "0.0.2.3",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
