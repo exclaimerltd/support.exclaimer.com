@@ -2,6 +2,10 @@
 <div class="container">
   <nav class="sub-nav">
     {{#is article.id 360033678971}}
+    <div class="release-notes">
+      <a href="">Return to Knowledge Base</a>
+    </div>
+    {{search submit=false}}
     {{else}}
     {{breadcrumbs}}
     {{search scoped=true submit=false}}
