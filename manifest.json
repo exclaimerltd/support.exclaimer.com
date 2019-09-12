@@ -1,7 +1,7 @@
 {
   "name": "Exclaimer KB",
   "author": "Zendesk",
-  "version": "0.0.1.8",
+  "version": "0.0.1.9",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
@@ -53,7 +53,7 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "'PT Sans', 'Myriad Pro', Arial, sans-serif",
+          "value": "Arial, sans-serif",
           "options": [
             {
               "label": "System",
@@ -61,11 +61,11 @@
             },
             {
               "label": "PT Sans",
-              "value": "PT Sans, Myrida Pro, Arial, sans-serif"
+              "value": "'PT Sans', 'Myrida Pro', Arial, sans-serif"
             },
             {
               "label": "Myrida Pro",
-              "value": "Myrida Pro, Arial, sans-serif"
+              "value": "'Myrida Pro', Arial, sans-serif"
             },
             {
               "label": "Arial",
