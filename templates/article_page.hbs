@@ -4,7 +4,33 @@
     {{breadcrumbs}}
     {{search scoped=true submit=false}}
   </nav>
+  {{#each section.articles}}
+  
+  {{#is ../section.id 360001222551}}
+    <div class="discontinued-product">
+      <b>This product has been discontinued</b><br/>To see a full list of discontinued Exclaimer Products please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Discontinued Products">here</a>
+    </div>
+  {{/is}}
 
+  {{#is ../section.id 360001222531}}
+    <div class="discontinued-product">
+      <b>This product has been discontinued</b><br/>To see a full list of discontinued Exclaimer Products please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Discontinued Products">here</a>
+    </div>
+  {{/is}}
+
+  {{#is ../section.id 360001219652}}
+    <div class="discontinued-product">
+      <b>This product has been discontinued</b><br/>To see a full list of discontinued Exclaimer Products please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Discontinued Products">here</a>
+    </div>
+  {{/is}}
+
+  {{#is ../section.id 360001219632}}
+    <div class="discontinued-product">
+      <b>This product has been discontinued</b><br/>To see a full list of discontinued Exclaimer Products please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Discontinued Products">here</a>
+    </div>
+  {{/is}}
+
+  {{/each}}
   <div class="article-container" id="article-container">
     <section class="article-sidebar">
       <section class="section-articles collapsible-sidebar">

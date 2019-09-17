@@ -4172,6 +4172,7 @@ Editing this CSS is for all Custom CSS within the KB */
 
 /* Discontinued Products - Hot Fix */
 .discontinued-product{
+  display: none;
   background-color: #fcf8e3;
   border: 1px solid #faebcc;
   border-radius: 5px;
@@ -4179,4 +4180,8 @@ Editing this CSS is for all Custom CSS within the KB */
   padding: 10px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.discontinued-product:nth-child(2){
+  display: block;
 }
