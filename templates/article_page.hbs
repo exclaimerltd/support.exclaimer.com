@@ -1,7 +1,7 @@
 <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
-    {{#is article.id 360033678971}}
+    {{#is article.title 'Whats new in Exclaimer Cloud'}}
     {{#link 'help_center'}}
     Return to Knowledge Base
     {{/link}}
@@ -13,20 +13,33 @@
   </nav>
 
   <div class="article-container" id="article-container">
-    {{#is article.id 360033678971}}
+    {{#is article.title 'Whats new in Exclaimer Cloud'}}
+    <section class="arcticle-sidebar">
+      <section class="section-articles collapsible-sidebar">
+        <h3>Previous releases</h3>
+        <ul>
+          <li>
+            <a href="#h_28d66295-021c-40e5-b7d7-4fa978818d9a" class="sidenav-item">16th September 2019</a>
+            <a href="#h_98d18cf8-391e-4049-8a1f-1a19606361c6" class="sidenav-item">11th June 2019</a>
+            <a href="#h_052194e4-8cfe-4a20-990e-dac224a4e66a" class="sidenav-item">10th April 2019</a>
+            <a href="#h_2f8b2d74-d5aa-43bf-9e44-20dfc3b346c1" class="sidenav-item">4th March 2018</a>
+          </li>
+        </ul>
+      </section>
+    </section>
     {{else}}
     <section class="article-sidebar">
       <section class="section-articles collapsible-sidebar">
         <h3 class="collapsible-sidebar-title sidenav-title">{{t 'articles_in_section'}}</h3>
         <ul>
           {{#each section.articles}}
-            <li>
-              <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-            </li>
+          <li>
+            <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
+          </li>
           {{/each}}
         </ul>
         {{#if section.more_articles}}
-          <a href="{{section.url}}" class="article-sidebar-item">{{t 'see_more'}}</a>
+        <a href="{{section.url}}" class="article-sidebar-item">{{t 'see_more'}}</a>
         {{/if}}
       </section>
     </section>
@@ -37,28 +50,28 @@
         <h1 title="{{article.title}}" class="article-title">
           {{article.title}}
           {{#if article.internal}}
-            <span class="icon-lock" title="{{t 'internal'}}"></span>
+          <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
 
         <div class="article-author">
           <div class="avatar article-avatar">
             {{#if article.author.agent}}
-              <span class="icon-agent"></span>
+            <span class="icon-agent"></span>
             {{/if}}
-            <img src="{{article.author.avatar_url}}" alt="Avatar" class="user-avatar"/>
+            <img src="{{article.author.avatar_url}}" alt="Avatar" class="user-avatar" />
           </div>
           <div class="article-meta">
             {{#link 'user_profile' id=article.author.id}}
-              {{article.author.name}}
+            {{article.author.name}}
             {{/link}}
 
             <ul class="meta-group">
               {{#is article.created_at article.edited_at}}
-                <li class="meta-data">{{date article.created_at timeago=true}}</li>
+              <li class="meta-data">{{date article.created_at timeago=true}}</li>
               {{else}}
-                <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-                <li class="meta-data">{{t 'updated'}}</li>
+              <li class="meta-data">{{date article.edited_at timeago=true}}</li>
+              <li class="meta-data">{{t 'updated'}}</li>
               {{/is}}
             </ul>
           </div>
@@ -73,13 +86,13 @@
           <div class="article-attachments">
             <ul class="attachments">
               {{#each attachments}}
-                <li class="attachment-item">
-                  <a href="{{url}}" target="_blank">{{name}}</a>
-                  <div class="attachment-meta meta-group">
-                    <span class="attachment-meta-item meta-data">{{size}}</span>
-                    <a href="{{url}}" target="_blank" class="attachment-meta-item meta-data">Download</a>
-                  </div>
-                </li>
+              <li class="attachment-item">
+                <a href="{{url}}" target="_blank">{{name}}</a>
+                <div class="attachment-meta meta-group">
+                  <span class="attachment-meta-item meta-data">{{size}}</span>
+                  <a href="{{url}}" target="_blank" class="attachment-meta-item meta-data">Download</a>
+                </div>
+              </li>
               {{/each}}
             </ul>
           </div>
@@ -90,10 +103,10 @@
         <div class="article-footer">
           <div class="article-share">{{share}}</div>
           {{#if comments}}
-            <a href="#article-comments" class="article-comment-count">
-              <span class="icon-comments"></span>
-              {{article.comment_count}}
-            </a>
+          <a href="#article-comments" class="article-comment-count">
+            <span class="icon-comments"></span>
+            {{article.comment_count}}
+          </a>
           {{/if}}
         </div>
         <!-- {{#with article}}
@@ -118,7 +131,7 @@
       </footer>
 
       <section class="article-relatives">
-        {{recent_articles}}<br/>
+        {{recent_articles}}<br />
         {{related_articles}}
       </section>
 
