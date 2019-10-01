@@ -4189,7 +4189,6 @@ Editing this CSS is for all Custom CSS within the KB */
   box-sizing: border-box;
   color: $brand_color;
   flex: 1 0 275px;
-  flex-direction: column;
   justify-content: center;
   margin: 10px;
   max-width: 100%;
@@ -4199,7 +4198,26 @@ Editing this CSS is for all Custom CSS within the KB */
   transition: 0.3s;
 }
 
+@media (max-width: 1160px){
+  .products-item-promoted{
+    flex: 1 0 228px;
+  }
+}
+
+@media (max-width: 900px){
+  .products-item-promoted{
+    flex: 1 0 150px;
+  }
+}
+
+@media (max-width: 768px){
+  .products-item-promoted{
+    flex: 1 0 100%;
+  }
+}
+
 .products-item > img{
+  max-width: 248px
 }
 
 .products-item-promoted{
