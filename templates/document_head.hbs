@@ -18,8 +18,7 @@ if dep = Offline - button will hide
 zE(function(){
   $zopim(function() {
     $zopim.livechat.setOnConnected(function() {
-      // var dep = $zopim.livechat.departments.getDepartment('Technical Support');
-      var dep = {name: "Technical Support", status: "offline", id: 1817736223};
+      var dep = $zopim.livechat.departments.getDepartment('Technical Support');
 
       if (dep !== undefined)
       {
