@@ -17,15 +17,33 @@ if dep = Offline - button will hide
 <script>
 zE(function(){
   $zopim(function() {
-    $zopim.livechat.departments.filter('Technical Support');
     $zopim.livechat.setOnConnected(function() {
-      var dep = $zopim.livechat.departments.getDepartment('Technical Support');
+      // var dep = $zopim.livechat.departments.getDepartment('Technical Support');
+      var dep = {name: "Technical Support", status: "offline", id: 1817736223};
+
+      if (dep !== undefined)
       {
-        if(dep.status == "offline"){
+        if(dep.status === "offline"){
           $zopim.livechat.button.hide();
-        }
-        else{
-          $zopim.livechat.button.show();
+
+          var chatOffline = document.createElement('a');
+          chatOffline.innerHTML = "<strong>Raise a ticket</strong>";
+          chatOffline.href = "https://www.exclaimer.co.uk/support/raise-ticket?__hstc=215508872.59a54c10126553fc96ce888fa4290e29.1568802969119.1575026668542.1575037981909.31&__hssc=215508872.19.1575037981909&__hsfp=2072851671&_ga=2.258731658.1669126398.1574859981-f518cbddc63944238165045495df4329";
+          chatOffline.classList.add("live-chat-offline");
+          document.body.appendChild(chatOffline);
+
+        }else{
+          $zopim.livechat.button.hide();
+
+          var chatOnline = document.createElement('a');
+          chatOnline.innerHTML = "<strong>Chat with us!</strong>";
+          chatOnline.href = "javascript:zE.activate();";
+          chatOnline.classList.add("live-chat-online");
+          document.body.appendChild(chatOnline);
+
+          $zopim.livechat.window.setColor('#5a6375');
+
+          $zopim.livechat.window.setOffsetVertical(-22);
         }
       }
     });
