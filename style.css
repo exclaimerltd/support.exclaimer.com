@@ -4476,3 +4476,9 @@ Editing this CSS is for all Custom CSS within the KB */
   padding: 10px;
   margin-bottom: 40px;
 }
+
+/*hide div by org*/
+.inty {
+  display: inline-block;
+  white-space: nowrap;
+}

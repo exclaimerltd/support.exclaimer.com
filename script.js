@@ -4,6 +4,23 @@
 
 $(document).ready(function() {
 
+/* if (HelpCenter.user.role==="manager"){
+  $("div.inty").show();
+}else{
+  $("div.inty").hide();
+} */
+
+// Show div html based on tag
+if (HelpCenter.user.role==="anonymous"){
+  $("div.inty").hide();
+}else{
+if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (Helpcenter.user['tags'].indexOf("support") > -1)){
+  $("div.inty").show();
+  }else{
+    $("div.inty").hide();
+  }
+}
+
   var dropzoneId = 'pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8';
 
   //Create a new instance.
@@ -127,3 +144,4 @@ $(document).ready(function() {
 function classToggle($elem) {
  $elem.classList.toggle("cat-section-selected");
 };
+
