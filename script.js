@@ -14,7 +14,7 @@ $(document).ready(function() {
 if (HelpCenter.user.role==="anonymous"){
   $("div.inty").hide();
 }else{
-if (HelpCenter.user['tags'].indexOf("partner") > -1){
+if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (Helpcenter.user['tags'].indexOf("support") > -1)){
   $("div.inty").show();
   }else{
     $("div.inty").hide();
