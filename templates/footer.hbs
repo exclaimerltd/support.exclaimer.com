@@ -61,3 +61,21 @@
       }
     };
   </script>
+
+  <script>
+    $( document ).ready(function() {
+      zE('webWidget:on', 'chat:departmentStatus', function(dept){
+        if(dept.name === 'Technical Support'){
+          if (dept.status === 'offline') {
+              zE('webWidget', 'chat:end');
+              //zE('webWidget', 'close');
+              zE('webWidget','hide');
+              $('#my-button').show();
+          } else {
+              zE('webWidget','show');
+              $('#my-button').hide();
+          }
+        }
+      });
+    });
+  </script>
