@@ -4478,7 +4478,12 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 /*hide div by org*/
-.inty {
+.api {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.euser {
   display: inline-block;
   white-space: nowrap;
 }

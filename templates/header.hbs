@@ -1,21 +1,26 @@
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-J8W9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-J8W9" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="header">
   <script type="text/javascript" src="https://app.sendsafely.com/js/external/SendSafelyZendesk.min.js"></script>
   <div class="logo">
     {{#link 'help_center'}}
-      <img src="{{settings.logo}}" alt="{{t 'logo'}}">
+    <img src="{{settings.logo}}" alt="{{t 'logo'}}">
     {{/link}}
   </div>
   <div class="nav-wrapper">
     <span class="icon-menu"></span>
     <nav class="user-nav" id="user-nav">
-      <div class="inty">
-      {{link 'community' }}
+      <div class="api">
+        {{#link 'community' }}
+        Partners
+        {{/link}}
+        {{link 'new_request' class='submit-a-request'}}
       </div>
-      <a class="submit-a-request" href="https://www.exclaimer.com/support/raise-ticket">Submit a request</a>
+      <div class="euser">
+        <a class="submit-a-request" href="https://www.exclaimer.com/support/raise-ticket">Submit a request</a>
+      </div>
     </nav>
     {{user_info}}
   </div>

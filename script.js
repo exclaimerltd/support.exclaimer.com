@@ -16,12 +16,14 @@ $(document).ready(function() {
 
   // Show div html based on tag
 if (HelpCenter.user.role==="anonymous"){
-  $("div.inty").hide();
+  $("div.api").hide();
 }else{
 if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'].indexOf("support") > -1)){
-  $("div.inty").show();
+  $("div.api").show();
+  $("div.euser").hide();
   }else{
-    $("div.inty").hide();
+    $("div.api").hide();
+    $("div.euser").show();
   }
 }
 
