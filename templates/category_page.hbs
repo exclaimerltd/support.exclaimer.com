@@ -4,11 +4,15 @@
     {{breadcrumbs}}
     {{search scoped=true submit=false}}
   </nav>
+
+  <!-- START: Discontinued Products -->
   {{#is category.name 'Discontinued Products'}}
-    <div class="discontinued-product">
-      <b>These products have been discontinued</b><br/>To see the full list of discontinued Exclaimer Products, please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Discontinued Products">here</a>
-    </div>
+      <div class="discontinued">
+        To see a full list of discontinued Exclaimer Products please see the page <a href="https://www.exclaimer.co.uk/products/discontinued" title="Exclaimer Discontinued & Legacy Products" target="_blank">here</a>
+      </div>
   {{/is}}
+  <!-- END: Discontinued Products -->
+
   <div class="category-container">
     <div class="category-content">
       <header class="page-header">
@@ -41,7 +45,23 @@
                       <a href="{{url}}" class="article-list-link">{{title}}</a>
                     </li>
                   {{/each}}
+                  {{#is article_count 4}}
+
                 </ul>
+                  <a href="{{url}}" class="see-all-articles">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                {{/is}}
+                {{#is article_count 5}}
+                  <a href="{{url}}" class="see-all-articles">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                {{/is}}
+                {{#is article_count 6}}
+                  <a href="{{url}}" class="see-all-articles">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                {{/is}}
                 {{#if more_articles}}
                   <a href="{{url}}" class="see-all-articles">
                     {{t 'show_all_articles' count=article_count}}

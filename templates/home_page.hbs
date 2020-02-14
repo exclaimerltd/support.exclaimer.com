@@ -1,10 +1,22 @@
 <section class="section hero">
   <div class="hero-inner">
-    {{search submit=false instant=true class='search search-full'}}
+    <h1>How can we help?</h1>
+    <p>Start by typing a question or a topic below</p>
+    {{search submit=false instant=true class='hero-search hero-search-full'}}
   </div>
 </section>
 
-
+<section class="section featured">
+  <div class="container">
+    <div class="featured-item">
+      <div class="featured-block">
+        <h3><a href="https://support.exclaimer.com/hc/en-gb/articles/360033728771">Whats new in Exclaimer Cloud</a></h3>
+        <p>Releases and changes to the Exclaimer Cloud</p>
+      </div>
+      <a href="https://support.exclaimer.com/hc/en-gb/articles/360033728771" class="featured-button">Read More</a>
+    </div>
+  </div>
+</section>
 
 <div class="container">
   <section class="section knowledge-base">
@@ -18,53 +30,100 @@
         </li>
       </ul>
     </section> -->
-    <section class="categories blocks">
-      <ul class="blocks-list">
+
+    <!-- Promoted Products -->
+    <section id="livePromotedProducts" class="categories blocks">
+      <ul class="products-list">
         {{#each categories}}
-          {{#if ../has_multiple_categories}}
-            <li class="blocks-item">
-              <a href='{{url}}' class="blocks-item-link">
-                <h4 class="blocks-item-title">{{name}}</h4>
-                <p class="blocks-item-description">{{excerpt description}}</p>
-              </a>
-            </li>
-          {{else}}
-            {{#each sections}}
-              <li class="blocks-item {{#if internal}}blocks-item-internal{{/if}}">
-                <a href='{{url}}' class="blocks-item-link">
-                  <h4 class="blocks-item-title">
-                    {{name}}
-                    {{#if internal}}
-                      <span class="icon-lock" title="{{t 'internal'}}"></span>
-                    {{/if}}
-                  </h4>
-                  <p class="blocks-item-description">{{excerpt description}}</p>
-                </a>
-              </li>
-            {{/each}}
-          {{/if}}
+          {{#is name 'Exclaimer Cloud'}}
+            <a href='{{url}}' class="products-item products-item-promoted products-item-ec">
+              <img src="{{asset 'ec-logo.png'}}"/>
+            </a>
+          {{/is}}
+          {{#is name 'Signature Manager Exchange Edition'}}
+            <a href='{{url}}' class="products-item products-item-promoted products-item-smee">
+              <img src="{{asset 'smee-logo.png'}}"/>
+            </a>
+          {{/is}}
+          {{#is name 'Signature Manager Outlook Edition'}}
+            <a href='{{url}}' class="products-item products-item-promoted products-item-smoe">
+              <img src="{{asset 'smoe-logo.png'}}"/>
+            </a>
+          {{/is}}
+          {{#is name 'Frequently Asked Questions'}}
+            <a href='{{url}}' class="products-item products-item-promoted products-item-faq">
+              <img src="{{asset 'faq-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+          {{#is name 'Signature Design'}}
+            <a href='{{url}}' class="products-item products-item-promoted products-item-sigd" >
+              <img src="{{asset 'sigd-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
         {{/each}}
       </ul>
-      {{pagination}}
     </section>
 
-    {{#if promoted_articles}}
-      <section class="articles">
-        <h3>{{t 'promoted_articles'}}</h3>
-        <ul class="article-list promoted-articles">
-          {{#each promoted_articles}}
-            <li class="promoted-articles-item">
-              <a href="{{url}}">
-                {{title}}
-              </a>
-            </li>
-          {{/each}}
-        </ul>
-      </section>
-    {{/if}}
+    <div class="other-products">
+      <span>Other Products</span>
+    </div>
+
+    <!-- Other Products -->
+    <section id="liveOtherProducts" class="categories others-blocks">
+      <ul class="products-list">
+        {{#each categories}}
+          {{#is name 'Auto Responder'}}
+            <a href='{{url}}' class="products-item products-item-ar">
+              <img src="{{asset 'ar-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+          {{#is name 'Mail Archiver'}}
+            <a href='{{url}}' class="products-item products-item-ma">
+              <img src="{{asset 'ma-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+          {{#is name 'Email Alias Manager for Exchange'}}
+            <a href='{{url}}' class="products-item products-item-eam">
+              <img src="{{asset 'eam-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+          {{#is name 'Template Editor'}}
+            <a href='{{url}}' class="products-item products-item-td">
+              <img src="{{asset 'td-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+          {{#is name 'Mail Disclaimers'}}
+            <a href='{{url}}' class="products-item products-item-md">
+              <img src="{{asset 'md-logo.png'}}" style="max-height: 40px"/>
+            </a>
+          {{/is}}
+          {{#is name 'Discontinued Products'}}
+            <a href='{{url}}' class="products-item products-item-disc">
+              <img src="{{asset 'disc-logo.png'}}" style="max-height: 40px" />
+            </a>
+          {{/is}}
+        {{/each}}
+      </ul>
+    </section>
+
   </section>
 
-  {{#if help_center.community_enabled}}
+  {{#if promoted_articles}}
+    <section class="section promo-articles">
+      <h3>{{t 'promoted_articles'}}</h3>
+      <ul class="promo-articles-list">
+        {{#each promoted_articles}}
+          <li class="promo-articles-item">
+            <span data-title="Promoted article" class="icon-star"></span><a href="{{url}}">
+              {{title}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
+  <!-- {{#if help_center.community_enabled}}
     <section class="section community">
       <h2>{{t 'community'}}</h2>
       {{#link 'community' class='community-link'}}
@@ -73,7 +132,7 @@
 
       <div class="community-image"></div>
     </section>
-  {{/if}}
+  {{/if}} -->
 
   <section class="section activity">
     {{recent_activity}}

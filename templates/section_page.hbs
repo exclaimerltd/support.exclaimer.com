@@ -7,7 +7,7 @@
 
   <div class="section-container">
     <section class="section-content">
-      <header class="page-header">
+      <header class="section-header">
         <h1>
           {{section.name}}
           {{#if section.internal}}
@@ -15,35 +15,39 @@
           {{/if}}
         </h1>
         {{subscribe}}
-        {{#if section.description}}
-        <p class="page-header-description">{{section.description}}</p>
-        {{/if}}
       </header>
-
       {{#if section.articles}}
-      <ul class="article-list">
+      <ul class="section-article-list">
         {{#is section.id 360002868051}}
-        <li class="article-list-item">
+        <li class="section-article-list-item">
           <a href="https://exclaimersupport.zendesk.com/hc/en-gb/articles/360022325911-How-to-purchase-Exclaimer-Cloud"
-            class="article-list-link">
+            class="section-article-list-link">
             How to purchase Exclaimer Cloud
           </a>
         </li>
         {{/is}}
         {{#is section.id 360002861632}}
-        <li class="article-list-item">
+        <li class="section-article-list-item">
           <a href="https://support.exclaimer.com/hc/en-gb/articles/360022406491-How-to-track-the-clicks-of-links-contained-in-email-signatures-with-analytics-software-UTM-parameters"
-            class="article-list-link">
+            class="section-article-list-link">
             How to track the clicks of links contained in email signatures with analytics software & UTM parameters
           </a>
         </li>
         {{/is}}
         {{#each section.articles}}
-        <li class="article-list-item {{#if promoted}} article-promoted{{/if}}">
-          {{#if promoted}}
-          <span data-title="{{t 'promoted'}}" class="icon-star"></span>
-          {{/if}}
-          <a href="{{url}}" class="article-list-link">{{title}}</a></li>
+          <li class="section-article-list-item {{#if promoted}} article-promoted{{/if}}">
+            <div class="section-article-list-group">
+              {{#if promoted}}
+              <span data-title="{{t 'promoted'}}" class="icon-star"></span>
+              {{/if}}
+              <div class="section-article-title"><a href="{{url}}">{{title}}</a> </div>
+
+              <div class="section-article-metadata">
+                <div class="section-article-author">{{#link 'user_profile' id=author.id}}{{author.name}}{{/link}} - {{date created_at class='metadata' format='medium'}}</div>
+              </div>
+            </div>
+            <div class="section-article-link"><a href="{{url}}" role="button">Read article</a></div>
+          </li>
         {{/each}}
       </ul>
       {{else}}

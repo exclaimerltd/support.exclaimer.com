@@ -4,28 +4,23 @@
 
 $(document).ready(function() {
 
-var redirects = {
-    "/forums/2-knowledge-base/topics/753-outlook-may-hang-when-using-mcafee-virusscan-with-on-access-scan-enabled/":"/hc/en-gb/articles/360004514191-Outlook-may-hang-when-using-McAfee-VirusScan-with-On-Access-Scan-enabled",
-    "/topic/543871-remove-existing-outlook-signatures-using-a-group-policy-object/":"/hc/en-gb/articles/360004462812-Disable-existing-Microsoft-Outlook-signatures-using-a-Group-Policy-Object",
-    "/topic/543907-messages-that-are-sent-on-behalf-of-use-the-disclaimer-details-from-the-assistant/":"/hc/en-gb/articles/360004411911-How-to-update-a-sent-item-which-was-sent-as-another-user-in-Signature-Manager-Exchange-Edition",
-    "/topic/596460-why-is-my-exchange-server-converting-emails-into-plain-text/":"/hc/en-gb/articles/360004462211-Emails-sent-in-HTML-format-are-received-in-Plain-Text-format",
-    "/topic/767973-signatures-for-office-365-and-connectors-in-office-365/":"/hc/en-gb/articles/360019586992-Setup-Overview-Exclaimer-Cloud-Signatures-For-Office-365-",
-    "/topics/1001-ews-connectivity-test-fails-with-501-not-implemented-error/":"/hc/en-gb/articles/360004511031-EWS-connectivity-test-fails-with-501-Not-Implemented-Error",
-    "/topics/515-signature-manager-exchange-edition-remote-deployment-service/":"/hc/en-gb/articles/360004470071-Remote-Deployment-Configuration-Synchronisation",
-    "/topics/627-the-outlook-add-in-loads-slowly-on-a-computer-that-has-no-internet-connection/":"/hc/en-gb/articles/360004492272-The-Outlook-Add-In-loads-slowly-on-a-computer-that-has-no-Internet-connection",
-    "/topics/730-disable-existing-microsoft-outlook-signatures-using-a-group-policy-object/":" /hc/en-gb/articles/360004462812-Disable-existing-Microsoft-Outlook-signatures-using-a-Group-Policy-Object",
-    "/topics/739-how-to-set-up-an-iphone-to-always-send-in-html/":"/hc/en-gb/articles/360004327732-How-to-setup-an-iPhone-to-always-send-in-HTML",
-    "/topics/846-images-in-the-email-signature-are-not-displayed-when-the-email-is-received/":"/hc/en-gb/articles/360004502571-Images-in-the-email-signature-are-not-displayed-when-the-email-is-received"
+/* if (HelpCenter.user.role==="manager"){
+  $("div.inty").show();
+}else{
+  $("div.inty").hide();
+} */
+
+// Show div html based on tag
+if (HelpCenter.user.role==="anonymous"){
+  $("div.inty").hide();
+}else{
+if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'].indexOf("support") > -1)){
+  $("div.inty").show();
+  }else{
+    $("div.inty").hide();
+  }
 }
 
-for (var redirect in redirects)
-{
-    if (window.location.href.indexOf(redirect) > -1)
-    {
-        window.location.href = 'https://support.exclaimer.com/' + redirects[redirect]
-    }
-}
-	
   var dropzoneId = 'pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8';
 
   //Create a new instance.
@@ -149,3 +144,4 @@ for (var redirect in redirects)
 function classToggle($elem) {
  $elem.classList.toggle("cat-section-selected");
 };
+

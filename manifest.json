@@ -1,7 +1,7 @@
 {
   "name": "Exclaimer KB",
   "author": "Zendesk",
-  "version": "0.0.2.2",
+  "version": "0.0.3.4",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
@@ -53,11 +53,19 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "Futura, 'Century Gothic', AppleGothic, sans-serif",
+          "value": "Roboto, 'Century Gothic', AppleGothic, sans-serif",
           "options": [
             {
               "label": "System",
               "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "PT Sans",
+              "value": "'PT Sans', 'Myrida Pro', Arial, sans-serif"
+            },
+            {
+              "label": "Myrida Pro",
+              "value": "'Myrida Pro', Arial, sans-serif"
             },
             {
               "label": "Arial",
@@ -85,7 +93,7 @@
             },
             {
               "label": "Futura",
-              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+              "value": "Roboto, 'Century Gothic', AppleGothic, sans-serif"
             },
             {
               "label": "Garamond",
@@ -126,11 +134,19 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "Futura, 'Century Gothic', AppleGothic, sans-serif",
+          "value": "Roboto, 'Century Gothic', AppleGothic, sans-serif",
           "options": [
             {
               "label": "System",
               "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "PT Sans",
+              "value": "PT Sans, Myrida Pro, Arial, Sans-Serif"
+            },
+            {
+              "label": "Myrida Pro",
+              "value": "Myrida Pro, Arial, Sans-Serif"
             },
             {
               "label": "Arial",
@@ -158,7 +174,7 @@
             },
             {
               "label": "Futura",
-              "value": "Futura, 'Century Gothic', AppleGothic, sans-serif"
+              "value": "Roboto, 'Century Gothic', AppleGothic, sans-serif"
             },
             {
               "label": "Garamond",
