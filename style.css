@@ -4322,8 +4322,8 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-selected > .cat-section-title{
   color: white;
-  background: url($assets-caret-up-svg) no-repeat #f37021;
-  background-size: 15px;
+  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background-size: 20px;
   background-position: right 10px center;
   border: 1px solid #f37021;
   border-radius: 5px 5px 0 0;
@@ -4332,8 +4332,8 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-selected > .cat-section-title:hover{
   color: white;
-  background: url($assets-caret-up-svg) no-repeat #f37021;
-  background-size: 15px;
+  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background-size: 20px;
   background-position: right 10px center;
 }
 
@@ -4346,13 +4346,13 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-section-title{
-  background: url($assets-caret-down-svg) no-repeat;
-  background-size: 15px;
+  background: url($assets-plus-circle-svg) no-repeat;
+  background-size: 20px;
   background-position: right 10px center;
   transition: 0.3s;
   font-weight: bold;
   font-size: 18px;
-  padding: 10px 30px 10px 10px;
+  padding: 10px;
   cursor: pointer;
   border: 1px solid #cccccc;
   border-radius: 5px;
@@ -4361,8 +4361,8 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-title:hover{
   color: white;
-  background: url($assets-caret-down-white-svg) no-repeat #f37021;
-  background-size: 15px;
+  background: url($assets-plus-circle-white-svg) no-repeat #f37021;
+  background-size: 20px;
   background-position: right 10px center;
   border-color: #f37021;
 }
