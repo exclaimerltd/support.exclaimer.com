@@ -1,15 +1,8 @@
 <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
-    {{#is article.title 'Whats new in Exclaimer Cloud'}}
-    {{#link 'help_center'}}
-    Return to Knowledge Base
-    {{/link}}
-    {{search submit=false}}
-    {{else}}
-    {{breadcrumbs}}
-    {{search scoped=true submit=false}}
-    {{/is}}
+    {{#is article.title 'Whats new in Exclaimer Cloud'}} {{#link 'help_center'}} Return to Knowledge Base {{/link}} {{search
+    submit=false}} {{else}} {{breadcrumbs}} {{search scoped=true submit=false}} {{/is}}
   </nav>
   {{#each section.articles}}
   
@@ -74,35 +67,33 @@
     <article class="article">
       <header class="article-header">
         <h1 title="{{article.title}}" class="article-title">
-          {{article.title}}
-          {{#if article.internal}}
+          {{article.title}} {{#if article.internal}}
           <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
 
         <div class="article-author">
           <div class="avatar article-avatar">
-            {{#if article.author.agent}}
+{{!--             {{#if article.author.agent}}
             <span class="icon-agent"></span>
-            {{/if}}
-            <img src="{{article.author.avatar_url}}" alt="Avatar" class="user-avatar" />
+            {{/if}} --}}
+            <img class="user-avatar" src="{{asset 'exclaimer-logo.png'}}" alt="Avatar" />
           </div>
           <div class="article-meta">
-            {{#link 'user_profile' id=article.author.id}}
-            {{article.author.name}}
-            {{/link}}
-
-            <ul class="meta-group">
-              {{#is article.created_at article.edited_at}}
-              <li class="meta-data">{{date article.created_at timeago=true}}</li>
-              {{else}}
-              <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-              <li class="meta-data">{{t 'updated'}}</li>
-              {{/is}}
-            </ul>
+            <span class="article-author" title="Exclaimer Support">
+              Exclaimer Support
+            </span>
+              <ul class="meta-group">
+                {{#is article.created_at article.edited_at}}
+                <li class="meta-data">{{date article.created_at timeago=true}}</li>
+                {{else}}
+                <li class="meta-data">{{date article.edited_at timeago=true}}</li>
+                <li class="meta-data">{{t 'updated'}}</li>
+                {{/is}}
+              </ul>
+            </div>
           </div>
-        </div>
-        {{subscribe}}
+          {{subscribe}}
       </header>
 
       <section class="article-info">
@@ -149,18 +140,21 @@
         {{/with}} -->
 
         <div class="article-more-questions">
-          Have more questions? <a href="https://www.exclaimer.com/support/raise-ticket">Submit a request</a>
+          Have more questions?
+          <a href="https://www.exclaimer.com/support/raise-ticket">Submit a request</a>
         </div>
         <div class="article-return-to-top">
-          <a href="#article-container">{{t 'return_to_top'}}<span class="icon-arrow-up"></span></a>
+          <a href="#article-container">{{t 'return_to_top'}}
+            <span class="icon-arrow-up"></span>
+          </a>
         </div>
       </footer>
 
       <section class="article-relatives">
-        {{recent_articles}}<br />
-        {{related_articles}}
+        {{recent_articles}}
+        <br /> {{related_articles}}
       </section>
 
     </article>
+    </div>
   </div>
-</div>
