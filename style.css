@@ -4291,7 +4291,6 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .category-container{
   flex: 0 0 100%;
-
 }
 
 @media (min-width: 1024px){
@@ -4301,9 +4300,9 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-container{
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
+  display: block;
+  column-count: 2;
+  column-gap: 40px;
 }
 
 @media (max-width: 768px){
@@ -4315,14 +4314,14 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-section{
-  flex: 0 49%;
   margin-bottom: 1rem;
   color: #333333;
+  overflow: auto;
 }
 
 .cat-section-selected > .cat-section-title{
   color: white;
-  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background: url($assets-caret-up-svg) no-repeat #f37021;
   background-size: 20px;
   background-position: right 10px center;
   border: 1px solid #f37021;
@@ -4332,7 +4331,7 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-selected > .cat-section-title:hover{
   color: white;
-  background: url($assets-minus-circle-svg) no-repeat #f37021;
+  background: url($assets-caret-up-svg) no-repeat #f37021;
   background-size: 20px;
   background-position: right 10px center;
 }
@@ -4346,13 +4345,14 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-section-title{
-  background: url($assets-plus-circle-svg) no-repeat;
+  background: url($assets-caret-down-svg) no-repeat;
   background-size: 20px;
   background-position: right 10px center;
   transition: 0.3s;
   font-weight: bold;
   font-size: 18px;
   padding: 10px;
+  padding-right: 35px;
   cursor: pointer;
   border: 1px solid #cccccc;
   border-radius: 5px;
@@ -4361,7 +4361,7 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-title:hover{
   color: white;
-  background: url($assets-plus-circle-white-svg) no-repeat #f37021;
+  background: url($assets-caret-down-white-svg) no-repeat #f37021;
   background-size: 20px;
   background-position: right 10px center;
   border-color: #f37021;
