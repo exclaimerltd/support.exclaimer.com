@@ -1,7 +1,7 @@
 <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
-    {{#is article.title 'Whats new in Exclaimer Cloud'}} {{#link 'help_center'}} Return to Knowledge Base {{/link}} {{search
+    {{#is article.id 360033728771}} {{#link 'help_center'}} Return to Knowledge Base Home {{/link}} {{search
     submit=false}} {{else}} {{breadcrumbs}} {{search scoped=true submit=false}} {{/is}}
   </nav>
   {{#each section.articles}}
@@ -32,13 +32,15 @@
 
   {{/each}}
   <div class="article-container" id="article-container">
-    {{#is article.title 'Whats new in Exclaimer Cloud'}}
+    {{#is article.id 360033728771}}
     <section class="arcticle-sidebar">
       <section class="section-articles collapsible-sidebar">
         <h3>Previous releases</h3>
         <ul>
           <li>
-            <a href="#h_28d66295-021c-40e5-b7d7-4fa978818d9a" class="sidenav-item">September 2019</a>
+            <a href="#h_4ab92361-8f7a-4890-a651-d9250f623b1b" class="sidenav-item">April 2020</a>
+            <a href="#h_11120f61-3b76-4316-bf83-e0436afaed7f" class="sidenav-item">February 2020</a>
+            <a href="#h_b762122c-2aab-4c8d-81ee-125417b2dd7a" class="sidenav-item">September 2019</a>
             <a href="#h_98d18cf8-391e-4049-8a1f-1a19606361c6" class="sidenav-item">June 2019</a>
             <a href="#h_052194e4-8cfe-4a20-990e-dac224a4e66a" class="sidenav-item">April 2019</a>
             <a href="#h_2f8b2d74-d5aa-43bf-9e44-20dfc3b346c1" class="sidenav-item">March 2018</a>
@@ -46,6 +48,9 @@
         </ul>
       </section>
     </section>
+    {{else}}
+    {{#is article.id 360042331092}}
+
     {{else}}
     <section class="article-sidebar">
       <section class="section-articles collapsible-sidebar">
@@ -62,6 +67,7 @@
         {{/if}}
       </section>
     </section>
+    {{/is}}
     {{/is}}
 
     <article class="article">
