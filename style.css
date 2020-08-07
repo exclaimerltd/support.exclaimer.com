@@ -4488,3 +4488,87 @@ Editing this CSS is for all Custom CSS within the KB */
   display: inline-block;
   white-space: nowrap;
 }
+
+/***** Notification boxes *****/
+.notify{
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.75em;
+  font-size: 0.9em;
+  border: 1px solid #dfe3ee;
+  border-radius: 5px;
+}
+.notify--info{
+  background-color: rgba(1, 204, 220, 0.1);
+  border-color: #03d0ff;
+  color: #03d0ff;
+}
+.notify--info::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900;
+  content: "\f05a";
+}
+.notify--success{
+  background-color: rgba(7, 149, 66, 0.1);
+  border-color: #0ad406;
+  color: #0ad406;
+}
+.notify--success::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900;
+  content: "\f058";
+}
+.notify--warning{
+  background-color: rgba(220, 128, 1, 0.1);
+  border-color: #ffb103;
+  color: #ffb103;
+}
+.notify--warning::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900;
+  content: "\f071";
+}
+.notify--danger{
+  background-color: rgba(220, 17, 1, 0.1);
+  border-color: #ff0303;
+  color: #ff0303;
+}
+.notify--danger::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900;
+  content: "\f00d";
+}
+.notify--code-block{
+  background-color: rgba(223, 227, 238, 0.4);
+  border-color: #b1b4bc;
+  color: #989ba2;
+  font-family: 'Courier New', Courier, monospace;;
+  font-style: italic;
+}
+.notify--code-block::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f121";
+}
+.notify--error-code{
+  background-color: rgba(223, 227, 238, 0.4);
+  border-color: #ff0303;
+  color: #ff0303;
+  font-family: 'Courier New', Courier, monospace;;
+  font-style: italic;
+}
+.notify--error-code::before{
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f121";
+}
+
