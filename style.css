@@ -4489,6 +4489,7 @@ Editing this CSS is for all Custom CSS within the KB */
   white-space: nowrap;
 }
 
+/***** Notification boxes *****/
 .notify{
   display: block;
   margin-top: 1em;
@@ -4570,3 +4571,4 @@ Editing this CSS is for all Custom CSS within the KB */
   font-weight: 900;
   content: "\f121";
 }
+
