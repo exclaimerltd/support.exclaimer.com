@@ -23,60 +23,67 @@
 </footer>
 
 <script type="text/javascript">
-    window.zESettings = {
-      webWidget: {
-          launcher: {
-              label: {
-                  '*': 'Get Help'
-              },
-          },
-        helpCenter: {
-            title: {
-                '*': 'Search for help'
-            },
-            searchPlaceholder: {
-                '*': 'Search our help center'
-            },
-            chatButton: {
-                '*': 'Chat online'
-            },
-            messageButton: {
-                '*': 'Leave a message'
-            }
+  window.zESettings = {
+    webWidget: {
+      launcher: {
+        label: {
+          '*': 'Get Help'
         },
-        chat: {
-          title: {
-              '*': 'Ask Us Anything'
+      },
+      helpCenter: {
+        title: {
+          '*': 'Search for help'
+        },
+        searchPlaceholder: {
+          '*': 'Search the knowledge base'
+        },
+        chatButton: {
+          '*': 'Chat online'
+        },
+        messageButton: {
+          '*': 'Leave a message'
+        }
+      },
+      chat: {
+        title: {
+          '*': 'Ask Us Anything'
+        },
+        hidewhenoffline: true,
+        departments: {
+          enabled: ['Technical Support'],
+          select: 'Technical Support'
+        },
+        prechatForm: {
+          greeting: {
+            '*': 'In order to help you as quickly as we can, please provide a little background information in the message area below and start the chat. \n\n'
           },
-          hidewhenoffline: true,
-          departments: {
-            enabled: ['Technical Support'],
-            select: 'Technical Support'
+          departmentLabel: {
+            '*': 'Select a department'
           },
           offlineform: {
-              greeting: {
-                  '*': "We aren't online right now, please leave a message"
-              }
+            greeting: {
+              '*': "We aren't online right now, please leave a message"
+            }
           }
         }
       }
-    };
-  </script>
+    }};
+</script>
 
-  <script>
-    $( document ).ready(function() {
-      zE('webWidget:on', 'chat:departmentStatus', function(dept){
-        if(dept.name === 'Technical Support'){
+<script>
+    $(document).ready(function () {
+      zE('webWidget:on', 'chat:departmentStatus', function (dept) {
+        if (dept.name === 'Technical Support') {
           if (dept.status === 'offline') {
-              zE('webWidget', 'chat:end');
-              //zE('webWidget', 'close');
-              zE('webWidget','hide');
-              $('#my-button').show();
+            zE('webWidget', 'chat:end');
+            //zE('webWidget', 'close');
+            zE('webWidget', 'hide');
+            $('#my-button').show();
           } else {
-              zE('webWidget','show');
-              $('#my-button').hide();
+            zE('webWidget', 'show');
+            $('#my-button').hide();
           }
         }
       });
     });
-  </script>
+</script>
