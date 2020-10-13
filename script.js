@@ -25,7 +25,7 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   }
 }
 
-  $(".cat-section").first().addClass( "cat-section-selected" );
+  
 
   var dropzoneId = 'pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8';
 
@@ -147,7 +147,9 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
 
 });
 
-function classToggle($elem) {
- $elem.classList.toggle("cat-section-selected");
-};
+// $(".cat-section").first().addClass( "cat-section-selected" );
+
+// function classToggle($elem) {
+//  $elem.classList.toggle("cat-section-selected");
+// };
 
