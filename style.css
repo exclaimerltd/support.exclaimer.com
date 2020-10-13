@@ -742,6 +742,7 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
+  color: #576476;
 }
 
 @media (min-width: 768px) {
@@ -4300,12 +4301,9 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-container{
-  column-count: 2;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-gap: 40px;
-  -moz-column-gap: 40px;
-  -webkit-column-gap: 40px;
+  display: flex;
+  flex-flow: wrap row;
+  margin: 0 -1%;
 }
 
 @media (max-width: 768px){
@@ -4317,15 +4315,120 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-section{
-  margin-bottom: 1rem;
-  color: #333333;
-  overflow: auto;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
+  display: flex;
+  align-items: center;
+  width: 48%;
+  margin: 1%;
+  padding: 0.5rem;
+  border: 1px solid #dfe3ee;
+  border-radius: 0.25rem;
+  color: #576476;
+  transition: ease all 0.3s;
 }
 
-.cat-section-selected > .cat-section-title{
+.cat-section:hover{
+  background-color: #f37021;
+  border-color: #f37021;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section-container{
+  display: flex;
+  flex-flow: column;
+}
+
+@media (max-width: 768px){
+  .section-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+}
+
+.section-sub-section-list{
+  display: flex;
+  flex-flow: wrap row;
+  margin: 0 -0.5%;
+  margin-bottom: 3rem;
+}
+
+.section-sub-section{
+  display: flex;
+  align-items: center;
+  width: 49%;
+  margin: 0.5%;
+  padding: 0.5rem;
+  border: 1px solid #dfe3ee;
+  border-radius: 0.25rem;
+  color: #576476;
+  transition: ease all 0.3s;
+}
+
+.section-sub-section:hover{
+  background-color: #f37021;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.section-article-list{
+  display: flex;
+  flex-flow: column;
+}
+
+.section-article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe3ee;
+  padding: 1rem 0;
+}
+
+.section-article:first-child{
+  padding-top: 0;
+}
+
+.section-article:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.section-sub-section-header{
+  color: #576476;
+  margin-bottom: 0;
+}
+
+.section-article-header{
+  margin-bottom: 0;
+  color: #576476;
+}
+
+.section-article-link{
+  color: #576476;
+  transition: ease all 0.3s;
+}
+
+.section-article-link:hover{
+  color: #f37021;
+  text-decoration: none;
+}
+
+.section-article-btn{
+  border-radius: 0.25rem;
+  background-color: #576476;
+  color: #ffffff;
+  padding: 0.5rem;
+  transition: ease all 0.3s;
+}
+
+.section-article-btn:hover{
+  background-color: #f37021;
+  text-decoration: none;
+}
+
+/* OLD CODE NOT TO BE USED */
+/* .cat-section-selected > .cat-section-title{
   color: white;
   background: url($assets-caret-up-svg) no-repeat #f37021;
   background-size: 15px;
@@ -4351,7 +4454,6 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .cat-section-title{
-  background: url($assets-caret-down-svg) no-repeat;
   background-size: 15px;
   background-position: right 10px center;
   transition: 0.3s;
@@ -4367,10 +4469,9 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .cat-section-title:hover{
   color: white;
-  background: url($assets-caret-down-white-svg) no-repeat #f37021;
   background-size: 15px;
-  background-position: right 10px center;
   border-color: #f37021;
+  background-color: 
 }
 
 .cat-articles{
@@ -4403,7 +4504,7 @@ Editing this CSS is for all Custom CSS within the KB */
 .cat-articles > .section-empty{
   display: inline-block;
   padding: 15px;
-}
+} */
 
 /* ARTICLES */
 
