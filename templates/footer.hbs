@@ -22,7 +22,7 @@
   </div>
 </footer>
 
-<script type="text/javascript">
+{{!-- <script type="text/javascript">
   window.zESettings = {
     webWidget: {
       color: {
@@ -77,9 +77,93 @@
         }
       }
     }};
+</script> --}}
+
+<script type="text/javascript">
+  window.zESettings = {
+    webWidget: {
+      // Color API - All Sites
+      color: {
+        theme: '#F37021',
+        launcher: '#F37021', // This will also update the badge
+        launcherText: '#FFFFFF',
+        button: '#576476',
+        resultLists: '#576476',
+        header: '#576476',
+        articleLinks: '#F37021'
+      },
+      // Launcher API - All Sites
+      launcher: {
+        label: {
+          "*": "Get help?",
+        },
+        chatLabel: {
+          "*": "Chat online",
+        },
+        mobile: {
+          labelVisible: true,
+        },
+      },
+      // Chat API - All Sites
+      chat: {
+        title: {
+          "*": "Ask Us Anything",
+        },
+        departments: {
+          enabled: ["Technical Support","sales"],
+          select: "Technical Support",
+        },
+        hideWhenOffline: true,
+        prechatForm: {
+          greeting: {
+            "*":
+              "To ensure our Support representatives can help you as quickly as we can.\n\nPlease provide a as much information as you can about your query in the message area below.\n",
+          },
+        },
+        offlineForm: {
+          greeting: {
+            "*": "We aren't online right now, please leave a message",
+          },
+        },
+      },
+      contactOptions: {
+        enabled: true,
+        title: {
+          "*": "Contact Us",
+        },
+        contactButton: {
+          "*": "Get in touch",
+        },
+        chatLabelOnline: {
+          "*": "Chat online",
+        },
+        chatLabelOffline: {
+          "*": "Chat is unavailable",
+        },
+        contactFormLabel: {
+          "*": "Raise a ticket",
+        },
+      },
+      // Helpcenter API - All Sites
+      helpCenter: {
+        title: {
+          "*": "Search for help",
+        },
+        searchPlaceholder: {
+          "*": "Search our Help Center",
+        },
+      },
+      // Contact Form API */
+      contactForm: {
+        title: {
+          "*": "Raise a ticket",
+        }
+      },
+    },
+  };
 </script>
 
-<script>
+{{!-- <script>
     $(document).ready(function () {
       zE('webWidget:on', 'chat:departmentStatus', function (dept) {
         if (dept.name === 'Technical Support') {
@@ -95,4 +179,4 @@
         }
       });
     });
-</script>
+</script> --}}
