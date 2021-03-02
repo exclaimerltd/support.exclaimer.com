@@ -4,79 +4,22 @@
 
     <div class="footer-language-selector">
       {{#if alternative_locales}}
-        <div class="dropdown language-selector" aria-haspopup="true">
-          <a class="dropdown-toggle">
-            {{current_locale.name}}
+      <div class="dropdown language-selector" aria-haspopup="true">
+        <a class="dropdown-toggle">
+          {{current_locale.name}}
+        </a>
+        <span class="dropdown-menu dropdown-menu-end" role="menu">
+          {{#each alternative_locales}}
+          <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+            {{name}}
           </a>
-          <span class="dropdown-menu dropdown-menu-end" role="menu">
-            {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </div>
+          {{/each}}
+        </span>
+      </div>
       {{/if}}
     </div>
   </div>
 </footer>
-
-{{!-- <script type="text/javascript">
-  window.zESettings = {
-    webWidget: {
-      color: {
-        theme: '#F37021',
-        launcher: '#F37021', // This will also update the badge
-        launcherText: '#FFFFFF',
-        button: '#576476',
-        resultLists: '#576476',
-        header: '#576476',
-        articleLinks: '#F37021'
-      },
-      launcher: {
-        label: {
-          '*': 'Get Help'
-        },
-      },
-      helpCenter: {
-        title: {
-          '*': 'Search for help'
-        },
-        searchPlaceholder: {
-          '*': 'Search the knowledge base'
-        },
-        chatButton: {
-          '*': 'Chat online'
-        },
-        messageButton: {
-          '*': 'Leave a message'
-        }
-      },
-      chat: {
-        title: {
-          '*': 'Ask Us Anything'
-        },
-        hidewhenoffline: true,
-        departments: {
-          enabled: ['Technical Support'],
-          select: 'Technical Support'
-        },
-        prechatForm: {
-          greeting: {
-            '*': 'In order to help you as quickly as we can, please provide a little background information in the message area below and start the chat. \n\n'
-          },
-          departmentLabel: {
-            '*': 'Select a department'
-          },
-          offlineform: {
-            greeting: {
-              '*': "We aren't online right now, please leave a message"
-            }
-          }
-        }
-      }
-    }};
-</script> --}}
 
 <script type="text/javascript">
   window.zESettings = {
@@ -109,15 +52,18 @@
           "*": "Ask Us Anything",
         },
         departments: {
-          enabled: ["Technical Support","sales"],
+          enabled: ["Technical Support", "Sales", "Resellers"],
           select: "Technical Support",
         },
         hideWhenOffline: true,
         prechatForm: {
           greeting: {
             "*":
-              "To ensure our Support representatives can help you as quickly as we can.\n\nPlease provide a as much information as you can about your query in the message area below.\n",
+              "To ensure our representatives can help you as quickly as we can.\n\nPlease provide a as much information as you can about your query in the message area below.\n",
           },
+          departmentLabel: {
+            '*': 'Select a department'
+          }
         },
         offlineForm: {
           greeting: {
@@ -125,6 +71,7 @@
           },
         },
       },
+      // Contact options - All Sites
       contactOptions: {
         enabled: true,
         title: {
@@ -162,20 +109,21 @@
   };
 </script>
 
-{{!-- <script>
-    $(document).ready(function () {
-      zE('webWidget:on', 'chat:departmentStatus', function (dept) {
-        if (dept.name === 'Technical Support') {
-          if (dept.status === 'offline') {
-            zE('webWidget', 'chat:end');
-            //zE('webWidget', 'close');
-            zE('webWidget', 'hide');
-            $('#my-button').show();
-          } else {
-            zE('webWidget', 'show');
-            $('#my-button').hide();
-          }
+{{!--
+<script>
+  $(document).ready(function () {
+    zE('webWidget:on', 'chat:departmentStatus', function (dept) {
+      if (dept.name === 'Technical Support') {
+        if (dept.status === 'offline') {
+          zE('webWidget', 'chat:end');
+          //zE('webWidget', 'close');
+          zE('webWidget', 'hide');
+          $('#my-button').show();
+        } else {
+          zE('webWidget', 'show');
+          $('#my-button').hide();
         }
-      });
+      }
     });
+  });
 </script> --}}
