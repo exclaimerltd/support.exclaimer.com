@@ -1,95 +1,117 @@
 <footer class="footer">
   <div class="footer-inner">
-    {{#link 'help_center'}}{{help_center.name}}{{/link}}
-
+    <div>
+      {{#link 'help_center'}}{{help_center.name}}{{/link}} | <a title="Exclaimer" href="https://www.exclaimer.com/">Exclaimer</a>
+    </div>
     <div class="footer-language-selector">
       {{#if alternative_locales}}
-        <div class="dropdown language-selector" aria-haspopup="true">
-          <a class="dropdown-toggle">
-            {{current_locale.name}}
+      <div class="dropdown language-selector" aria-haspopup="true">
+        <a class="dropdown-toggle">
+          {{current_locale.name}}
+        </a>
+        <span class="dropdown-menu dropdown-menu-end" role="menu">
+          {{#each alternative_locales}}
+          <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+            {{name}}
           </a>
-          <span class="dropdown-menu dropdown-menu-end" role="menu">
-            {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </div>
+          {{/each}}
+        </span>
+      </div>
       {{/if}}
     </div>
   </div>
 </footer>
-
-{{!-- <script type="text/javascript">
-  window.zESettings = {
-    webWidget: {
-      color: {
-        theme: '#F37021',
-        launcher: '#F37021', // This will also update the badge
-        launcherText: '#FFFFFF',
-        button: '#576476',
-        resultLists: '#576476',
-        header: '#576476',
-        articleLinks: '#F37021'
-      },
-      launcher: {
-        label: {
-          '*': 'Get Help'
-        },
-      },
-      helpCenter: {
-        title: {
-          '*': 'Search for help'
-        },
-        searchPlaceholder: {
-          '*': 'Search the knowledge base'
-        },
-        chatButton: {
-          '*': 'Chat online'
-        },
-        messageButton: {
-          '*': 'Leave a message'
-        }
-      },
-      chat: {
-        title: {
-          '*': 'Ask Us Anything'
-        },
-        hidewhenoffline: true,
-        departments: {
-          enabled: ['Technical Support'],
-          select: 'Technical Support'
-        },
-        prechatForm: {
-          greeting: {
-            '*': 'In order to help you as quickly as we can, please provide a little background information in the message area below and start the chat. \n\n'
-          },
-          departmentLabel: {
-            '*': 'Select a department'
-          },
-          offlineform: {
-            greeting: {
-              '*': "We aren't online right now, please leave a message"
-            }
-          }
-        }
-      }
-    }};
-</script> --}}
 
 <script type="text/javascript">
   window.zESettings = {
     webWidget: {
       // Color API - All Sites
       color: {
-        theme: '#F37021',
-        launcher: '#F37021', // This will also update the badge
-        launcherText: '#FFFFFF',
-        button: '#576476',
-        resultLists: '#576476',
-        header: '#576476',
-        articleLinks: '#F37021'
+        theme: "#F37021",
+        launcher: "#F37021", // This will also update the badge
+        launcherText: "#FFFFFF",
+        button: "#576476",
+        resultLists: "#576476",
+        header: "#576476",
+        articleLinks: "#F37021",
+      },
+      // Contact Form API */
+      contactForm: {
+        suppress: false,
+        title: {
+          "*": "Raise a ticket",
+        },
+        ticketForms: [
+        {
+          id: 360000355937,
+          title: false
+        }
+        ],
+        subject: true,
+        attachments: true,
+      },
+      // Chat API - All Sites
+      chat: {
+        suppress: false,
+        title: {
+          "*": "Ask Us Anything",
+        },
+        departments: {
+          enabled: ["Technical Support", "Sales", "Resellers"],
+          select: "Technical Support",
+        },
+        concierge: {
+          avatarPath: 'https://cdn.exclaimer.com/Static2/exclaimer-icon_256x256.png',
+          name: 'Exclaimer'
+        },
+        profileCard: {
+          avatar: true,
+          rating: true,
+          title: true,
+        },
+        hideWhenOffline: true,
+        prechatForm: {
+          greeting: {
+            "*":
+              "To ensure our representatives can help you as quickly as we can.\n\nPlease provide a as much information as you can about your query in the message area below.\n",
+          },
+          departmentLabel: {
+            "*": "Select a department",
+          },
+        },
+        offlineForm: {
+          greeting: {
+            "*": "We aren't online right now, please leave a message",
+          },
+        },
+      },
+      // Helpcenter API - All Sites
+      helpCenter: {
+        suppress: false,
+        title: {
+          "*": "Search for help",
+        },
+        searchPlaceholder: {
+          "*": "Search our Help Center",
+        },
+      },
+      // Answerbot API
+      answerBot: {
+        suppress: false,
+        title: {
+          "*": "Chat with us!",
+        },
+        contactOnlyAfterQuery: true,
+        search: {
+          labels: ["I would like help."],
+        },
+        avatar: {
+          url:
+            "https://cdn.exclaimer.com/Static2/exclaimer-icon_256x256.png",
+          name: {
+            "*": "Exclaimer",
+          },
+        },
       },
       // Launcher API - All Sites
       launcher: {
@@ -99,32 +121,14 @@
         chatLabel: {
           "*": "Chat online",
         },
+        talkLabel: {
+          "*": "Ask for a callback"
+        },
         mobile: {
           labelVisible: true,
         },
       },
-      // Chat API - All Sites
-      chat: {
-        title: {
-          "*": "Ask Us Anything",
-        },
-        departments: {
-          enabled: ["Technical Support","sales"],
-          select: "Technical Support",
-        },
-        hideWhenOffline: true,
-        prechatForm: {
-          greeting: {
-            "*":
-              "To ensure our Support representatives can help you as quickly as we can.\n\nPlease provide a as much information as you can about your query in the message area below.\n",
-          },
-        },
-        offlineForm: {
-          greeting: {
-            "*": "We aren't online right now, please leave a message",
-          },
-        },
-      },
+      // Contact options - All Sites
       contactOptions: {
         enabled: true,
         title: {
@@ -143,39 +147,6 @@
           "*": "Raise a ticket",
         },
       },
-      // Helpcenter API - All Sites
-      helpCenter: {
-        title: {
-          "*": "Search for help",
-        },
-        searchPlaceholder: {
-          "*": "Search our Help Center",
-        },
-      },
-      // Contact Form API */
-      contactForm: {
-        title: {
-          "*": "Raise a ticket",
-        }
-      },
     },
   };
 </script>
-
-{{!-- <script>
-    $(document).ready(function () {
-      zE('webWidget:on', 'chat:departmentStatus', function (dept) {
-        if (dept.name === 'Technical Support') {
-          if (dept.status === 'offline') {
-            zE('webWidget', 'chat:end');
-            //zE('webWidget', 'close');
-            zE('webWidget', 'hide');
-            $('#my-button').show();
-          } else {
-            zE('webWidget', 'show');
-            $('#my-button').hide();
-          }
-        }
-      });
-    });
-</script> --}}
