@@ -2,9 +2,8 @@
  * jQuery v1.9.1 included
  */
 
-$(document).ready(function() {
-
-/*   // Redirect scripts for old pages
+$(document).ready(function () {
+  /*   // Redirect scripts for old pages
   var oldIds = ["360019588132", "360019717912","360019785691","360019588132","360019717912","360019785691","360019794111","360019795391","360019837411","360020036071","360000554232","360000554252","360002861612","360020911751","360008008013","360007902054","360021836372","360019902572","360019795391","360019940771","360020132091","360019846111","360019603052","360019942391"];
   var newIds = ["360028646932", "360028969491","360028964011","360028646932","360028969491","360028964011","360028963451","360028964031","360028646932","360028963571","360001782491","360001782491","360004627952","360028650492","360028651112","360028651752","360028647592","360028647932","360028647012","360028968931","360028647672","360028967891","360028966851","360028652332"];
 
@@ -15,42 +14,99 @@ $(document).ready(function() {
   } */
 
   // Show div html based on tag
-if (HelpCenter.user.role==="anonymous"){
-  $("div.inty").hide();
-}else{
-if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'].indexOf("support") > -1)){
-  $("div.inty").show();
-  }else{
+  if (HelpCenter.user.role === "anonymous") {
     $("div.inty").hide();
+  } else {
+    if (
+      HelpCenter.user["tags"].indexOf("partner") > -1 ||
+      HelpCenter.user["tags"].indexOf("support") > -1
+    ) {
+      $("div.inty").show();
+    } else {
+      $("div.inty").hide();
+    }
   }
-}
-
 
   //Store the ticket form ID
   const ticketForm = location.search.split("ticket_form_id=")[1];
 
- //Create if statement for each of your forms
- /* if (ticketForm == 360000355937) { */
+  // Support Ticket Form
+  if (ticketForm == 360000355937) {
+    // Licence Key
+    $(".form-field.request_custom_fields_360014285458").append(
+      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
+    );
+    // Subscription ID
+    $(".form-field.request_custom_fields_360014356197").append(
+      '<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>'
+    );
 
-     // Licence Key
-     $('.form-field.request_custom_fields_360014285458').append('<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>');
-     // Subscription ID
-     $('.form-field.request_custom_fields_360014356197').append('<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>');
+    // Hides discontinued products from drop down
+    var tagsToRemove = [
+      "as",
+      "ia",
+      "mu",
+      "sm",
+      "exchange_address_tagging",
+      "outlook_photos",
+    ];
+    removeTagsWeDontWant();
+    function removeTagsWeDontWant() {
+      $(".nesty-panel").on("DOMNodeInserted", function () {
+        for (var i in tagsToRemove) {
+          $("li#" + tagsToRemove[i]).remove();
+        }
+      });
+    }
+  }
 
-/* } */
+  // Early Access Program Form
+  if (ticketForm == 360000471838) {
+    // Licence Key
+    $(".form-field.request_custom_fields_360014285458").append(
+      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
+    );
+    // Subscription ID
+    $(".form-field.request_custom_fields_360014356197").append(
+      '<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>'
+    );
 
-// Hides discontinued products from drop down
- var tagsToRemove = ['as','ia','mu','sm','exchange_address_tagging','outlook_photos'];
- removeTagsWeDontWant();
- function removeTagsWeDontWant() {
-   $(".nesty-panel").on("DOMNodeInserted", function () {
-     for (var i in tagsToRemove) {
-       $("li#" + tagsToRemove[i]).remove();
-     }
-   });
- }  
+    $("#request_custom_fields_360001315371").val(
+      "ecsm"
+    );
+    $("#request_custom_fields_360001315371").parent(".request_custom_fields_360001315371").hide();
 
-  var dropzoneId = 'pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8';
+    $('#request_subject').val('Early Access Program Signup Request');
+    $("#request_subject").parent(".request_subject").hide();
+
+    // Hides discontinued products from drop down
+    var tagsToRemove = [
+      "smee",
+      "smoe",
+      "ma3",
+      "ar",
+      "ame",
+      "te",
+      "md1",
+      "s365",
+      "as",
+      "ia",
+      "mu",
+      "sm",
+      "exchange_address_tagging",
+      "outlook_photos",
+    ];
+    removeTagsWeDontWant();
+    function removeTagsWeDontWant() {
+      $(".nesty-panel").on("DOMNodeInserted", function () {
+        for (var i in tagsToRemove) {
+          $("li#" + tagsToRemove[i]).remove();
+        }
+      });
+    }
+  }
+
+  var dropzoneId = "pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8";
 
   //Create a new instance.
   var sendsafely = new SendSafelyZendesk(dropzoneId);
@@ -58,15 +114,15 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
 
   //Point Category to external link
 
-	$("<li><a></a></li>")
-	.find("a")
-	.attr("href", "https://cloudsupport.exclaimer.com") // link
-	.html("Exclaimer Cloud: Signature for G Suite") // Title in english
-	.end()
-	.appendTo("ul.category-list");
+  $("<li><a></a></li>")
+    .find("a")
+    .attr("href", "https://cloudsupport.exclaimer.com") // link
+    .html("Exclaimer Cloud: Signature for G Suite") // Title in english
+    .end()
+    .appendTo("ul.category-list");
 
   // social share popups
-  $(".share a").click(function(e) {
+  $(".share a").click(function (e) {
     e.preventDefault();
     window.open(this.href, "", "height = 500, width = 500");
   });
@@ -75,7 +131,7 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   var $commentContainerTextarea = $(".comment-container textarea"),
     $commentContainerFormControls = $(".comment-form-controls, .comment-ccs");
 
-  $commentContainerTextarea.one("focus", function() {
+  $commentContainerTextarea.one("focus", function () {
     $commentContainerFormControls.show();
   });
 
@@ -84,11 +140,17 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   }
 
   // Expand Request comment form when Add to conversation is clicked
-  var $showRequestCommentContainerTrigger = $(".request-container .comment-container .comment-show-container"),
-    $requestCommentFields = $(".request-container .comment-container .comment-fields"),
-    $requestCommentSubmit = $(".request-container .comment-container .request-submit-comment");
+  var $showRequestCommentContainerTrigger = $(
+      ".request-container .comment-container .comment-show-container"
+    ),
+    $requestCommentFields = $(
+      ".request-container .comment-container .comment-fields"
+    ),
+    $requestCommentSubmit = $(
+      ".request-container .comment-container .request-submit-comment"
+    );
 
-  $showRequestCommentContainerTrigger.on("click", function() {
+  $showRequestCommentContainerTrigger.on("click", function () {
     $showRequestCommentContainerTrigger.hide();
     $requestCommentFields.show();
     $requestCommentSubmit.show();
@@ -96,9 +158,15 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   });
 
   // Mark as solved button
-  var $requestMarkAsSolvedButton = $(".request-container .mark-as-solved:not([data-disabled])"),
-    $requestMarkAsSolvedCheckbox = $(".request-container .comment-container input[type=checkbox]"),
-    $requestCommentSubmitButton = $(".request-container .comment-container input[type=submit]");
+  var $requestMarkAsSolvedButton = $(
+      ".request-container .mark-as-solved:not([data-disabled])"
+    ),
+    $requestMarkAsSolvedCheckbox = $(
+      ".request-container .comment-container input[type=checkbox]"
+    ),
+    $requestCommentSubmitButton = $(
+      ".request-container .comment-container input[type=submit]"
+    );
 
   $requestMarkAsSolvedButton.on("click", function () {
     $requestMarkAsSolvedCheckbox.attr("checked", true);
@@ -107,14 +175,20 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   });
 
   // Change Mark as solved text according to whether comment is filled
-  var $requestCommentTextarea = $(".request-container .comment-container textarea");
+  var $requestCommentTextarea = $(
+    ".request-container .comment-container textarea"
+  );
 
-  $requestCommentTextarea.on("keyup", function() {
+  $requestCommentTextarea.on("keyup", function () {
     if ($requestCommentTextarea.val() !== "") {
-      $requestMarkAsSolvedButton.text($requestMarkAsSolvedButton.data("solve-and-submit-translation"));
+      $requestMarkAsSolvedButton.text(
+        $requestMarkAsSolvedButton.data("solve-and-submit-translation")
+      );
       $requestCommentSubmitButton.prop("disabled", false);
     } else {
-      $requestMarkAsSolvedButton.text($requestMarkAsSolvedButton.data("solve-translation"));
+      $requestMarkAsSolvedButton.text(
+        $requestMarkAsSolvedButton.data("solve-translation")
+      );
       $requestCommentSubmitButton.prop("disabled", true);
     }
   });
@@ -125,13 +199,15 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   }
 
   // Submit requests filter form in the request list page
-  $("#request-status-select, #request-organization-select")
-    .on("change", function() {
+  $("#request-status-select, #request-organization-select").on(
+    "change",
+    function () {
       search();
-    });
+    }
+  );
 
   // Submit requests filter form in the request list page
-  $("#quick-search").on("keypress", function(e) {
+  $("#quick-search").on("keypress", function (e) {
     if (e.which === 13) {
       search();
     }
@@ -141,11 +217,11 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
     window.location.search = $.param({
       query: $("#quick-search").val(),
       status: $("#request-status-select").val(),
-      organization_id: $("#request-organization-select").val()
+      organization_id: $("#request-organization-select").val(),
     });
   }
 
-  $(".header .icon-menu").on("click", function(e) {
+  $(".header .icon-menu").on("click", function (e) {
     e.stopPropagation();
     var menu = document.getElementById("user-nav");
     var isExpanded = menu.getAttribute("aria-expanded") === "true";
@@ -157,17 +233,16 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   }
 
   // Submit organization form in the request page
-  $("#request-organization select").on("change", function() {
+  $("#request-organization select").on("change", function () {
     this.form.submit();
   });
 
   // Toggles expanded aria to collapsible elements
-  $(".collapsible-nav, .collapsible-sidebar").on("click", function(e) {
+  $(".collapsible-nav, .collapsible-sidebar").on("click", function (e) {
     e.stopPropagation();
     var isExpanded = this.getAttribute("aria-expanded") === "true";
     this.setAttribute("aria-expanded", !isExpanded);
   });
-
 });
 
 // $(".cat-section").first().addClass( "cat-section-selected" );
@@ -175,4 +250,3 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
 // function classToggle($elem) {
 //  $elem.classList.toggle("cat-section-selected");
 // };
-
