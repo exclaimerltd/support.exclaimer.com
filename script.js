@@ -25,8 +25,6 @@ if ((HelpCenter.user['tags'].indexOf("partner") > -1) || (HelpCenter.user['tags'
   }
 }
 
-  
-
   var dropzoneId = 'pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8';
 
   //Create a new instance.
