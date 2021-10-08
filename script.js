@@ -15,8 +15,10 @@ $(document).ready(function () {
 
   // Empty Sender Changes
   var oldIds = ["360028972211","360052204252","360029201051","360028975011","360028974471"];
-  var newIds = ["4406732893457"];
+  var newIds = ["4406732893457","4406732893457","4406732893457","4406732893457","4406732893457"];
 
+
+  https://support.exclaimer.com/hc/en-gb/articles/360028975011
   for (var i = 0; i < oldIds.length; i++){
     if (window.location.href.indexOf(oldIds[i]) > -1) {
       window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
