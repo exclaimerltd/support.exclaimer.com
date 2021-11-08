@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
   } */
 
-  // Empty Sender Changes
+/*   // Empty Sender Changes
   var oldIds = ["360028972211","360052204252","360029201051","360028975011","360028974471"];
   var newIds = ["4406732893457","4406732893457","4406732893457","4406732893457","4406732893457"];
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
     if (window.location.href.indexOf(oldIds[i]) > -1) {
       window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
     }
-  }
+  } */
 
   // Show div html based on tag
   if (HelpCenter.user.role === "anonymous") {
