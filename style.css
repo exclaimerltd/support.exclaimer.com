@@ -4595,10 +4595,19 @@ Editing this CSS is for all Custom CSS within the KB */
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
-  padding: 0.75em;
+  padding: 0.75em 1em;
   font-size: 0.9em;
   border: 1px solid #dfe3ee;
   border-radius: 5px;
+}
+.notify > p {
+  margin-left: 20px;
+}
+.notify > p:first-child {
+  margin-top: 0;
+}
+.notify > p:last-child {
+  margin-bottom: 0;
 }
 .notify--info{
   background-color: rgba(1, 204, 220, 0.1);
@@ -4606,6 +4615,7 @@ Editing this CSS is for all Custom CSS within the KB */
   color: #03d0ff;
 }
 .notify--info::before{
+  position: absolute;
   margin-right: 5px;
   font-family: "Font Awesome 5 Pro"; 
   font-weight: 900;
@@ -4617,6 +4627,7 @@ Editing this CSS is for all Custom CSS within the KB */
   color: #0ad406;
 }
 .notify--success::before{
+  position: absolute;
   margin-right: 5px;
   font-family: "Font Awesome 5 Pro"; 
   font-weight: 900;
@@ -4628,6 +4639,7 @@ Editing this CSS is for all Custom CSS within the KB */
   color: #ffb103;
 }
 .notify--warning::before{
+  position: absolute;
   margin-right: 5px;
   font-family: "Font Awesome 5 Pro"; 
   font-weight: 900;
@@ -4639,12 +4651,15 @@ Editing this CSS is for all Custom CSS within the KB */
   color: #ff0303;
 }
 .notify--danger::before{
+  position: absolute;
   margin-right: 5px;
   font-family: "Font Awesome 5 Pro"; 
   font-weight: 900;
   content: "\f00d";
 }
+
 .notify--code-block{
+  position: absolute;
   background-color: rgba(223, 227, 238, 0.4);
   border-color: #b1b4bc;
   color: #989ba2;
@@ -4659,6 +4674,7 @@ Editing this CSS is for all Custom CSS within the KB */
   content: "\f121";
 }
 .notify--error-code{
+  position: absolute;
   background-color: rgba(223, 227, 238, 0.4);
   border-color: #ff0303;
   color: #ff0303;
@@ -4672,4 +4688,3 @@ Editing this CSS is for all Custom CSS within the KB */
   font-weight: 900;
   content: "\f121";
 }
-
