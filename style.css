@@ -2500,7 +2500,7 @@ ul {
 }
 
 /* Navigation element that collapses on mobile */
-.collapsible-nav {
+.article-collapsible-nav {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   flex-direction: column;
@@ -2510,7 +2510,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav {
+  .article-collapsible-nav {
     border: 0;
     height: auto;
     flex-direction: row;
@@ -2518,71 +2518,71 @@ ul {
   }
 }
 
-.collapsible-nav-list {
+.article-collapsible-nav-list {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav-list {
+  .article-collapsible-nav-list {
     flex-direction: row;
   }
 }
 
-.collapsible-nav-list li {
+.article-collapsible-nav-list li {
   color: $text_color;
   line-height: 45px;
   order: 1;
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav-list li {
+  .article-collapsible-nav-list li {
     line-height: normal;
     margin-right: 30px;
   }
-  [dir="rtl"] .collapsible-nav-list li {
+  [dir="rtl"] .article-collapsible-nav-list li {
     margin-left: 30px;
     margin-right: 0;
   }
-  .collapsible-nav-list li a {
+  .article-collapsible-nav-list li a {
     text-decoration: none;
     padding: 15px 0;
   }
 }
 
-.collapsible-nav-list li a {
+.article-collapsible-nav-list li a {
   color: $text_color;
   display: block;
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav-list li:hover {
+  .article-collapsible-nav-list li:hover {
     border-bottom: 4px solid #ddd;
   }
-  .collapsible-nav-list li:hover a {
+  .article-collapsible-nav-list li:hover a {
     padding: 15px 0 11px 0;
     text-decoration: none;
   }
 }
 
-.collapsible-nav-list li[aria-selected="true"] {
+.article-collapsible-nav-list li[aria-selected="true"] {
   order: 0;
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav-list li[aria-selected="true"] {
+  .article-collapsible-nav-list li[aria-selected="true"] {
     border-bottom: 4px solid $brand_color;
     order: 1;
     padding: 15px 0 11px 0;
   }
 }
 
-.collapsible-nav-list li[aria-selected="true"] a {
+.article-collapsible-nav-list li[aria-selected="true"] a {
   color: $text_color;
 }
 
-.collapsible-nav-list li[aria-selected="true"]::after {
+.article-collapsible-nav-list li[aria-selected="true"]::after {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -2592,26 +2592,26 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .collapsible-nav-list li[aria-selected="true"]::after {
+  .article-collapsible-nav-list li[aria-selected="true"]::after {
     display: none;
   }
 }
 
-[dir="rtl"] .collapsible-nav-list li[aria-selected="true"]::after {
+[dir="rtl"] .article-collapsible-nav-list li[aria-selected="true"]::after {
   left: 0;
   right: auto;
 }
 
-.collapsible-nav[aria-expanded="true"] {
+.article-collapsible-nav[aria-expanded="true"] {
   max-height: none;
 }
 
-.collapsible-nav[aria-expanded="true"] li[aria-selected="true"]::after {
+.article-collapsible-nav[aria-expanded="true"] li[aria-selected="true"]::after {
   content: "\2715";
 }
 
 /* Sidebar navigation that collapses on mobile */
-.collapsible-sidebar {
+.article-collapsible-sidebar {
   flex: 1;
   max-height: 45px;
   overflow: hidden;
@@ -2620,31 +2620,31 @@ ul {
 }
 
 @media (min-width: 1024px) {
-  .collapsible-sidebar {
+  .article-collapsible-sidebar {
     max-height: none;
     padding: 0;
   }
 }
 
-.collapsible-sidebar[aria-expanded="true"] {
+.article-collapsible-sidebar[aria-expanded="true"] {
   max-height: none;
 }
 
-.collapsible-sidebar[aria-expanded="true"] .collapsible-sidebar-title::after {
+.article-collapsible-sidebar[aria-expanded="true"] .article-collapsible-sidebar-title::after {
   content: "\2715";
 }
 
 @media (min-width: 1024px) {
-  .collapsible-sidebar[aria-expanded="true"] .collapsible-sidebar-title::after {
+  .article-collapsible-sidebar[aria-expanded="true"] .article-collapsible-sidebar-title::after {
     display: none;
   }
 }
 
-.collapsible-sidebar-title {
+.article-collapsible-sidebar-title {
   margin-top: 0;
 }
 
-.collapsible-sidebar-title::after {
+.article-collapsible-sidebar-title::after {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -2654,12 +2654,12 @@ ul {
 }
 
 @media (min-width: 1024px) {
-  .collapsible-sidebar-title::after {
+  .article-collapsible-sidebar-title::after {
     display: none;
   }
 }
 
-[dir="rtl"] .collapsible-sidebar-title::after {
+[dir="rtl"] .article-collapsible-sidebar-title::after {
   left: 10px;
   right: auto;
 }
@@ -3279,8 +3279,8 @@ ul {
 .vote-up::before,
 .vote-down::before,
 .actions .dropdown-toggle::before,
-.collapsible-nav-list li[aria-selected="true"]::after,
-.collapsible-sidebar-title::after,
+.article-collapsible-nav-list li[aria-selected="true"]::after,
+.article-collapsible-sidebar-title::after,
 .search-result-votes::before,
 .search-result-meta-count::before {
   font-family: "copenhagen-icons";
@@ -4687,4 +4687,52 @@ Editing this CSS is for all Custom CSS within the KB */
   font-style: normal;
   font-weight: 900;
   content: "\f121";
+}
+
+/* Article Accordion */
+.article-accordion {
+  position: relative;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.article-accordion:hover {
+  background-color: $brand_color;
+  color: #fff;
+}
+
+.active {
+  background-color: $brand_color;
+  color: #fff;
+}
+
+.article-panel {
+  padding: 0 18px;
+  margin-bottom: 18px;
+  background-color: #dfe3ee;
+  border: 1px solid #dfe3ee;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.article-accordion::after {
+  content: '+';
+  position: absolute;
+  right: 50px;
+}
+
+.active::after {
+  content: '-';
+  position: absolute;
+  right: 50px;
 }
