@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   for (var i = 0; i < oldIds.length; i++){
     if (window.location.href.indexOf(oldIds[i]) > -1) {
-      window.location.href = 'https://support.exclaimer.com/hc/en-gb/articles/' + newIds[i]; 
+      window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
     }
   }
 
@@ -20,9 +20,9 @@ $(document).ready(function () {
 
   for (var i = 0; i < oldkbIds.length; i++){
     if (window.location.href.indexOf(oldkbIds[i]) > -1) {
-      window.location.href = 'https://support.portal.exclaimer.com/hc/en-gb/articles/' + newkbIds[i]; 
+      window.location.href = 'https://support.portal.exclaimer.com/hc/en-us/articles/' + newkbIds[i]; 
     }
-  } */
+  } 
 
   // Show div html based on tag
   if (HelpCenter.user.role === "anonymous") {
