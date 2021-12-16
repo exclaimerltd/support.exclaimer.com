@@ -3,25 +3,24 @@
  */
 
 $(document).ready(function () {
-  /*   // Redirect scripts for old pages
-  var oldIds = ["360019588132", "360019717912","360019785691","360019588132","360019717912","360019785691","360019794111","360019795391","360019837411","360020036071","360000554232","360000554252","360002861612","360020911751","360008008013","360007902054","360021836372","360019902572","360019795391","360019940771","360020132091","360019846111","360019603052","360019942391"];
-  var newIds = ["360028646932", "360028969491","360028964011","360028646932","360028969491","360028964011","360028963451","360028964031","360028646932","360028963571","360001782491","360001782491","360004627952","360028650492","360028651112","360028651752","360028647592","360028647932","360028647012","360028968931","360028647672","360028967891","360028966851","360028652332"];
+
+  // In-site Redirects
+  var oldIds = ["360028972211","360052204252","360029201051","360028975011","360028974471","360018832998"];
+  var newIds = ["4406732893457","4406732893457","4406732893457","4406732893457","4406732893457","360018667217"];
 
   for (var i = 0; i < oldIds.length; i++){
     if (window.location.href.indexOf(oldIds[i]) > -1) {
-      window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
+      window.location.href = 'https://support.exclaimer.com/hc/en-gb/articles/' + newIds[i]; 
     }
-  } */
+  }
 
-/*   // Empty Sender Changes
-  var oldIds = ["360028972211","360052204252","360029201051","360028975011","360028974471"];
-  var newIds = ["4406732893457","4406732893457","4406732893457","4406732893457","4406732893457"];
+  // Redirect to new KB
+  var oldkbIds = ["360033728771"];
+  var newkbIds = ["360050180772"];
 
-
-  https://support.exclaimer.com/hc/en-gb/articles/360028975011
-  for (var i = 0; i < oldIds.length; i++){
-    if (window.location.href.indexOf(oldIds[i]) > -1) {
-      window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
+  for (var i = 0; i < oldkbIds.length; i++){
+    if (window.location.href.indexOf(oldkbIds[i]) > -1) {
+      window.location.href = 'https://support.portal.exclaimer.com/hc/en-gb/articles/' + newkbIds[i]; 
     }
   } */
 
