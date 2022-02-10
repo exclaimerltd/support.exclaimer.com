@@ -15,8 +15,8 @@ $(document).ready(function () {
   }
 
   // Redirect to new KB
-  var oldkbIds = ["360033728771"];
-  var newkbIds = ["360050180772"];
+  var oldkbIds = ["360033728771","360028964871"];
+  var newkbIds = ["360050180772","4405851491101"];
 
   for (var i = 0; i < oldkbIds.length; i++){
     if (window.location.href.indexOf(oldkbIds[i]) > -1) {
