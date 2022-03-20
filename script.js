@@ -41,8 +41,6 @@ $(document).ready(function () {
   //Store the ticket form ID
   const ticketForm = location.search.split("ticket_form_id=")[1];
 
-  // Support Ticket Form
-  if (ticketForm == 360000355937) {
     // Licence Key
     $(".form-field.request_custom_fields_360014285458").append(
       '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
@@ -51,25 +49,6 @@ $(document).ready(function () {
     $(".form-field.request_custom_fields_360014356197").append(
       '<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>'
     );
-
-    // Hides discontinued products from drop down
-    var tagsToRemove = [
-      "as",
-      "ia",
-      "mu",
-      "sm",
-      "exchange_address_tagging",
-      "outlook_photos",
-    ];
-    removeTagsWeDontWant();
-    function removeTagsWeDontWant() {
-      $(".nesty-panel").on("DOMNodeInserted", function () {
-        for (var i in tagsToRemove) {
-          $("li#" + tagsToRemove[i]).remove();
-        }
-      });
-    }
-  }
 
   // Early Access Program Form
   if (ticketForm == 360000471838) {
