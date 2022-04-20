@@ -719,7 +719,7 @@ ul {
 
 /***** Hero component *****/
 .hero {
-  background-image: url('assets/herobg.jpg');
+  background-image: url($assets-herobg-jpg);
   background-position: right bottom;
   background-size: contain;
   background-repeat: no-repeat;
