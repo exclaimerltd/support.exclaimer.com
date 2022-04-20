@@ -544,6 +544,7 @@ ul {
 .user-info > [role="button"]:hover {
   color: $link_color;
   background-color: transparent;
+  border: 0;
 }
 
 .user-info > [role="button"]::after {
@@ -718,9 +719,11 @@ ul {
 
 /***** Hero component *****/
 .hero {
-  background-image: url($homepage_background_image);
-  background-position: center;
-  background-size: cover;
+  background-image: url('assets/herobg.jpg');
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #0d0a47;
   height: 350px;
   padding: 0 20px;
   margin-bottom: 40px;
@@ -742,7 +745,7 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
-  color: #576476;
+  color: #0d0a47;
 }
 
 @media (min-width: 768px) {
@@ -4105,7 +4108,8 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .hero-search input[type="search"] {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 100px;
+  box-shadow: 0 0 0 5px rgb(255 255 255 / 15%);
   box-sizing: border-box;
   color: #999;
   height: 50px;
@@ -4131,48 +4135,54 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .featured{
+  display: flex;
+  align-items: center;
   width: 100%;
-  background-color: #576476;
+  background-color: #fa935c;
   margin-top: -40px;
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 15px;
   color: #ffffff;
 }
 
 .featured-item{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.featured-block > h3,
-.featured-block > p {
+.featured-item > h3,
+.featured-item > p {
   padding: 0;
   margin: 0;
 }
 
-.featured-block > h3 > a{
+.featured-item > h3 > a{
   color: #ffffff;
+  font-weight: normal;
   transition: 0.3s;
 }
 
-.featured-block > h3 > a:hover{
-  color: #f37021;
+.featured-item > h3 > a:hover{
+  color: #ffffff;
   text-decoration: none;
 }
 
 .featured-button{
- padding: 10px 15px;
+ padding: 5px 15px;
  border: 1px solid #fff;
- border-radius: 5px;
+ border-radius: 100px;
  color: #ffffff;
  align-self: center;
  text-decoration: none;
  transition: 0.3s;
+ font-size: 0.8rem;
 }
 
 .featured-button:hover{
-  background-color: #f37021;
-  border-color: #f37021;
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #fa935c;
   text-decoration: none;
 }
 
@@ -4185,18 +4195,26 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .products-item{
-  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  border: 1px solid #0d0a47;
   border-radius: 5px;
   box-sizing: border-box;
-  color: $brand_color;
+  color: #0d0a47;
   flex: 1 0 275px;
   justify-content: center;
   margin: 10px;
   max-width: 100%;
-  text-align: left;
-  line-height: 0;
-  padding: 15px 10px;
+  text-align: center;
+  padding: 2.62rem 1.67rem;
   transition: 0.3s;
+}
+
+.products-item:hover {
+  border-color: #0d0a47;
+  background-color: #0d0a47;
+  color: #fff;
+  text-decoration:none;
 }
 
 @media (max-width: 1160px){
@@ -4225,7 +4243,7 @@ Editing this CSS is for all Custom CSS within the KB */
   text-align: center;
 }
 
-.products-item-ec:hover     { border-color: #ef4123; }
+/* .products-item-ec:hover     { border-color: #ef4123; }
 .products-item-smee:hover   { border-color: #a15fa6; }
 .products-item-smoe:hover   { border-color: #4155a1; }
 .products-item-faq:hover    { border-color: #f26f25; }
@@ -4235,7 +4253,7 @@ Editing this CSS is for all Custom CSS within the KB */
 .products-item-ma:hover     { border-color: #d0ab5c; }
 .products-item-eam:hover    { border-color: #56c6d0; }
 .products-item-td:hover     { border-color: #b10046; }
-.products-item-disc:hover   { border-color: #f26f25; }
+.products-item-disc:hover   { border-color: #f26f25; } */
 
 .other-products{
   text-align: center;
@@ -4280,7 +4298,7 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .promo-articles-item > a:hover{
-  color: #f37021;
+  color: #fa935c;
   text-decoration: none;
 }
 
@@ -4322,13 +4340,13 @@ Editing this CSS is for all Custom CSS within the KB */
   padding: 0.5rem;
   border: 1px solid #dfe3ee;
   border-radius: 0.25rem;
-  color: #576476;
+  color: #0d0a47;
   transition: ease all 0.3s;
 }
 
 .cat-section:hover{
-  background-color: #f37021;
-  border-color: #f37021;
+  background-color: #fa935c;
+  border-color: #fa935c;
   color: #ffffff;
   text-decoration: none;
 }
@@ -4362,12 +4380,12 @@ Editing this CSS is for all Custom CSS within the KB */
   padding: 0.5rem;
   border: 1px solid #dfe3ee;
   border-radius: 0.25rem;
-  color: #576476;
+  color: #0d0a47;
   transition: ease all 0.3s;
 }
 
 .section-sub-section:hover{
-  background-color: #f37021;
+  background-color: #fa935c;
   color: #ffffff;
   text-decoration: none;
 }
@@ -4395,52 +4413,56 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .section-sub-section-header{
-  color: #576476;
+  color: #0d0a47;
   margin-bottom: 0;
 }
 
 .section-article-header{
   margin-bottom: 0;
-  color: #576476;
+  color: #0d0a47;
 }
 
 .section-article-link{
-  color: #576476;
+  color: #0d0a47;
   transition: ease all 0.3s;
 }
 
 .section-article-link:hover{
-  color: #f37021;
+  color: #fa935c;
   text-decoration: none;
 }
 
 .section-article-btn{
-  border-radius: 0.25rem;
-  background-color: #576476;
-  color: #ffffff;
-  padding: 0.5rem;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 1px solid #0d0a47;
+  color: #0d0a47;
+  font-size: 0.75rem;
+  padding: 0.75rem;
   transition: ease all 0.3s;
 }
 
 .section-article-btn:hover{
-  background-color: #f37021;
+  background-color: #0d0a47;
+  border-color: #0d0a47;
+  color: #fff;
   text-decoration: none;
 }
 
 /* OLD CODE NOT TO BE USED */
 /* .cat-section-selected > .cat-section-title{
   color: white;
-  background: url($assets-caret-up-svg) no-repeat #f37021;
+  background: url($assets-caret-up-svg) no-repeat #fa935c;
   background-size: 15px;
   background-position: right 10px center;
-  border: 1px solid #f37021;
+  border: 1px solid #fa935c;
   border-radius: 5px 5px 0 0;
   transition: 0.3s;
 }
 
 .cat-section-selected > .cat-section-title:hover{
   color: white;
-  background: url($assets-caret-up-svg) no-repeat #f37021;
+  background: url($assets-caret-up-svg) no-repeat #fa935c;
   background-size: 15px;
   background-position: right 10px center;
 }
@@ -4470,7 +4492,7 @@ Editing this CSS is for all Custom CSS within the KB */
 .cat-section-title:hover{
   color: white;
   background-size: 15px;
-  border-color: #f37021;
+  border-color: #fa935c;
   background-color: 
 }
 
@@ -4520,8 +4542,8 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .button:hover, [role="button"]:hover{
-  background-color: #f37021;
-  border: 1px solid #f37021;
+  background-color: #fa935c;
+  border: 1px solid #fa935c;
 }
 
 .button::after, [role="button"]::after{
@@ -4553,7 +4575,7 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .section-article-title > a:hover{
-  color: #f37021;
+  color: #fa935c;
 }
 
 .section-article-list-item{
