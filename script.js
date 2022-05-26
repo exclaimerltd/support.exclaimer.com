@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   for (var i = 0; i < oldkbIds.length; i++){
     if (window.location.href.indexOf(oldkbIds[i]) > -1) {
-      window.location.href = 'https://support.portal.exclaimer.com/hc/en-us/articles/' + newkbIds[i]; 
+      window.location.href = 'https://support.portal.exclaimer.com/hc/en-gb/articles/' + newkbIds[i]; 
     }
   } 
 
