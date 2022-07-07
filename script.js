@@ -4,26 +4,6 @@
 
 $(document).ready(function () {
 
-  // In-site Redirects
-  var oldIds = ["360028972211","360052204252","360029201051","360028974471","360018832998"];
-  var newIds = ["4406732893457","4406732893457","4406732893457","4406732893457","360018667217"];
-
-  for (var i = 0; i < oldIds.length; i++){
-    if (window.location.href.indexOf(oldIds[i]) > -1) {
-      window.location.href = 'https://support.exclaimer.com/hc/en-us/articles/' + newIds[i]; 
-    }
-  }
-
-  // Redirect to new KB
-  var oldkbIds = ["360033728771","360028964871","360022325911","360028963451","360028651292"];
-  var newkbIds = ["360050180772","4405851491101","360019148918","4778354885149","360018799217"];
-
-  for (var i = 0; i < oldkbIds.length; i++){
-    if (window.location.href.indexOf(oldkbIds[i]) > -1) {
-      window.location.href = 'https://support.portal.exclaimer.com/hc/en-gb/articles/' + newkbIds[i]; 
-    }
-  } 
-
   // Show div html based on tag
   if (HelpCenter.user.role === "anonymous") {
     $("div.inty").hide();
