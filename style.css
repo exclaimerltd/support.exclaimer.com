@@ -4758,3 +4758,51 @@ Editing this CSS is for all Custom CSS within the KB */
   position: absolute;
   right: 50px;
 }
+
+/** Legacy to Cloud buttons **/
+.cloud-leg-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $brand_color;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.cloud-leg-banner-button {
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+.cloud-leg-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 20px 20px;
+  border: 1px solid $brand_color;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: $brand_color;
+  transition: ease all 0.3s;
+  text-align: center;
+}
+
+.cloud-leg-button:hover{
+  background-color: $brand_color;
+  color: #fff;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activites-header-50 {
+  width: 60%;
+}
