@@ -4780,6 +4780,7 @@ Editing this CSS is for all Custom CSS within the KB */
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 250px;
   padding: 20px 20px;
   border: 1px solid $brand_color;
   border-radius: 50px;
