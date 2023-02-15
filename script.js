@@ -23,32 +23,9 @@ $(document).ready(function () {
 
     // Licence Key
     $(".form-field.request_custom_fields_360014285458").append(
-      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
+      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://legacy.support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
     );
-    // Subscription ID
-    $(".form-field.request_custom_fields_360014356197").append(
-      '<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>'
-    );
-
-  // Early Access Program Form
-  if (ticketForm == 360000471838) {
-    // Licence Key
-    $(".form-field.request_custom_fields_360014285458").append(
-      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
-    );
-    // Subscription ID
-    $(".form-field.request_custom_fields_360014356197").append(
-      '<p id="request_description_hint">To obtain your Sub ID, follow the steps <a href="https://support.portal.exclaimer.com/hc/en-gb/articles/360018307337" target="_blank">here</a></p>'
-    );
-
-    $("#request_custom_fields_360001315371").val(
-      "ecsm"
-    );
-    $("#request_custom_fields_360001315371").parent(".request_custom_fields_360001315371").hide();
-
-    $('#request_subject').val('Early Access Program Signup Request');
-    $("#request_subject").parent(".request_subject").hide();
-
+  
     // Hides discontinued products from drop down
     var tagsToRemove = [
       "smee",
