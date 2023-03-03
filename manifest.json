@@ -1,11 +1,7 @@
 {
   "name": "support.exclaimer.com",
   "author": "Zendesk",
-<<<<<<< HEAD
-  "version": "1.5.0",
-=======
   "version": "1.5.1",
->>>>>>> review
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
