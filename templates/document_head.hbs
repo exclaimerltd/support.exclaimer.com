@@ -74,9 +74,16 @@ drift.load('hks2ztkubhse');
   drift.unload();
   $zopim.livechat.button.show();
   $zopim.livechat.window.show();
-  $zopim.livechat.say("Hi, there I need support and I came from Drift chat. I can either dump the transcript here or in the notes.");
+  $zopim.livechat.say("Hi, there I need Customer Success and I came from Drift chat. I can either dump the transcript here or in the notes.");
   $zopim.livechat.concierge.setName('Chat transferred from Drift');
   $zopim.livechat.departments.setVisitorDepartment('Customer Success');
   }
+  });
+</script>
+
+<script type="text/javascript">
+  zE('webWidget:on', 'chat:end', function() {
+    $zopim.livechat.button.hide()
+    drift.load('hks2ztkubhse');
   });
 </script>
