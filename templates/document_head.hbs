@@ -21,3 +21,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Redirect Script Import -->
 <script src="{{asset 'redirects.js'}}"></script>
+
+<!-- Start of exclaimersupport Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=edc13bd8-6cb8-4c6e-843b-2aabd6debe04"> </script>
+<!-- End of exclaimersupport Zendesk Widget script -->
+
+<script>
+  zE(function() {
+  $zopim(function() {
+  $zopim.livechat.button.hide(); // Hide the Zendesk widget
+  });
+  });
+
+  window.drift.on("conversation:buttonClicked", function(data) {
+  console.log(data);
+  if (data.buttonBody == "Transfer me to Support") {
+  drift.unload();
+  $zopim.livechat.button.show();
+  $zopim.livechat.window.show();
+  $zopim.livechat.say("Hi, there I need support and I came from Drift chat. I can either dump the transcript here or in the notes.");
+  $zopim.livechat.concierge.setName('Chat transferred from Drift');
+  $zopim.livechat.departments.setVisitorDepartment('Support');
+  } else if (data.buttonBody == "Transfer me to Customer Success") {
+  drift.unload();
+  $zopim.livechat.button.show();
+  $zopim.livechat.window.show();
+  $zopim.livechat.say("Hi, there I need support and I came from Drift chat. I can either dump the transcript here or in the notes.");
+  $zopim.livechat.concierge.setName('Chat transferred from Drift');
+  $zopim.livechat.departments.setVisitorDepartment('Customer Success');
+  }
+  });
+</script>
