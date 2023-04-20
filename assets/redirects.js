@@ -398,7 +398,7 @@ for (var i = 0; i < newRedirects.length; i++) {
 
     for (var k = 0; k < j['from'].length; k++) {
         if (window.location.href.indexOf(j['from'][k]) > -1) {
-            window.location.href = 'https://support.portal.exclaimer.com/hc/en-gb/articles/' + j["to"]; 
+            window.location.href = 'https://support.exclaimer.com/hc/en-gb/articles/' + j["to"]; 
         }
     }
 }
