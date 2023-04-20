@@ -51,7 +51,7 @@ $(document).ready(function () {
         }
       });
     }
-  }
+  })
 
   var dropzoneId = "pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8";
 
@@ -190,7 +190,7 @@ $(document).ready(function () {
     var isExpanded = this.getAttribute("aria-expanded") === "true";
     this.setAttribute("aria-expanded", !isExpanded);
   });
-});
+
 
 // $(".cat-section").first().addClass( "cat-section-selected" );
 
