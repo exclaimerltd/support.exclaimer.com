@@ -21,37 +21,37 @@ $(document).ready(function () {
   //Store the ticket form ID
   const ticketForm = location.search.split("ticket_form_id=")[1];
 
-    // Licence Key
-    $(".form-field.request_custom_fields_360014285458").append(
-      '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://legacy.support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
-    );
-  
-    // Hides discontinued products from drop down
-    var tagsToRemove = [
-      "smee",
-      "smoe",
-      "ma3",
-      "ar",
-      "ame",
-      "te",
-      "md1",
-      "s365",
-      "as",
-      "ia",
-      "mu",
-      "sm",
-      "exchange_address_tagging",
-      "outlook_photos",
-    ];
-    removeTagsWeDontWant();
-    function removeTagsWeDontWant() {
-      $(".nesty-panel").on("DOMNodeInserted", function () {
-        for (var i in tagsToRemove) {
-          $("li#" + tagsToRemove[i]).remove();
-        }
-      });
-    }
-  })
+  // Licence Key
+  $(".form-field.request_custom_fields_360014285458").append(
+    '<p id="request_description_hint">To locate your licence key for Exclaimer, follow the guide <a href="https://legacy.support.exclaimer.com/hc/en-gb/articles/360018306577" target="_blank">here</a></p>'
+  );
+
+  // Hides discontinued products from drop down
+  var tagsToRemove = [
+    "smee",
+    "smoe",
+    "ma3",
+    "ar",
+    "ame",
+    "te",
+    "md1",
+    "s365",
+    "as",
+    "ia",
+    "mu",
+    "sm",
+    "exchange_address_tagging",
+    "outlook_photos",
+  ];
+  removeTagsWeDontWant();
+  function removeTagsWeDontWant() {
+    $(".nesty-panel").on("DOMNodeInserted", function () {
+      for (var i in tagsToRemove) {
+        $("li#" + tagsToRemove[i]).remove();
+      }
+    });
+  }
+  // }); // <---- Whats this?
 
   var dropzoneId = "pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8";
 
@@ -197,3 +197,5 @@ $(document).ready(function () {
 // function classToggle($elem) {
 //  $elem.classList.toggle("cat-section-selected");
 // };
+
+});
