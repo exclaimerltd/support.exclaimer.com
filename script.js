@@ -51,7 +51,7 @@ $(document).ready(function () {
       }
     });
   }
-});
+
 
   var dropzoneId = "pI9ntA_8cBhqTzB3rZtWAhcgfvJs24Kf6xCNAKAEDx8";
 
@@ -197,3 +197,5 @@ $(document).ready(function () {
 // function classToggle($elem) {
 //  $elem.classList.toggle("cat-section-selected");
 // };
+
+});
