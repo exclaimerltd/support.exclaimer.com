@@ -28,12 +28,9 @@ $(document).ready(function () {
 
   // Hides discontinued products from drop down
   var tagsToRemove = [
-    "smee",
-    "smoe",
-    "ma3",
+     "ma3",
     "ar",
     "ame",
-    "te",
     "md1",
     "s365",
     "as",
