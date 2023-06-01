@@ -4138,11 +4138,11 @@ Editing this CSS is for all Custom CSS within the KB */
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #778C65;
+  background-color: #AFD3C4;
   margin-top: -40px;
   margin-bottom: 40px;
   padding: 15px;
-  color: #ffffff;
+  color: #0E1934;
 }
 
 .featured-item{
@@ -4158,21 +4158,21 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .featured-item > h3 > a{
-  color: #ffffff;
+  color: #0E1934;
   font-weight: normal;
   transition: 0.3s;
 }
 
 .featured-item > h3 > a:hover{
-  color: #ffffff;
+  color: #0E1934;
   text-decoration: none;
 }
 
 .featured-button{
  padding: 5px 15px;
- border: 1px solid #fff;
+ border: 1px solid #0E1934;
  border-radius: 100px;
- color: #ffffff;
+ color: #0E1934;
  align-self: center;
  background-color: transparent;
  text-decoration: none;
@@ -4181,9 +4181,9 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .featured-button:hover{
-  background-color: #FFF;
-  border-color: #FFF;
-  color: #778C65;
+  background-color: #0E1934;
+  border-color: #0E1934;
+  color: #AFD3C4;
   text-decoration: none;
 }
 
@@ -4766,13 +4766,13 @@ Editing this CSS is for all Custom CSS within the KB */
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #778C65;
-  color: #fff;
+  background-color: #AFD3C4;
+  color: #0E1934;
   padding: 10px 20px;
 }
 
 .cloud-leg-banner-button {
-  color: #fff;
+  color: #0E1934;
   margin-left: 10px;
 }
 
