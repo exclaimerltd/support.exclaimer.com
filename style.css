@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: $background_color;
+  background-color: #fff;
   color: $text_color;
   font-family: $text_font;
   font-size: 15px;
@@ -458,7 +458,7 @@ ul {
 }
 
 .user-nav[aria-expanded="true"] {
-  background-color: #fff;
+  background-color: #EEE8E2;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   border: solid 1px #ddd;
   right: 0;
@@ -474,7 +474,7 @@ ul {
 
 .nav-wrapper a {
   border: 0;
-  color: $link_color;
+  color: #1B2037;
   display: none;
   font-size: 14px;
   padding: 0 20px 0 0;
@@ -535,7 +535,7 @@ ul {
 
 .user-info > [role="button"] {
   border: 0;
-  color: $link_color;
+  color: #1B2037;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
@@ -548,7 +548,7 @@ ul {
 }
 
 .user-info > [role="button"]::after {
-  color: $link_color;
+  color: #1B2037;
 }
 
 [dir="rtl"] .user-info > [role="button"]::after {
@@ -651,7 +651,7 @@ ul {
 }
 
 .breadcrumbs li {
-  color: lighten($text_color, 20%);
+  color: $link_color;
   display: inline;
   font-weight: 300;
   font-size: 13px;
@@ -719,11 +719,11 @@ ul {
 
 /***** Hero component *****/
 .hero {
-  background-image: url($assets-herobg-jpg);
-  background-position: right bottom;
-  background-size: contain;
+  background-image: url($assets-herobg-png);
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: #0d0a47;
+  background-color: #0E1934;
   height: 350px;
   padding: 0 20px;
   margin-bottom: 40px;
@@ -745,7 +745,7 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
-  color: #0d0a47;
+  color: $brand_color;
 }
 
 @media (min-width: 768px) {
@@ -4138,7 +4138,7 @@ Editing this CSS is for all Custom CSS within the KB */
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #fa935c;
+  background-color: #778C65;
   margin-top: -40px;
   margin-bottom: 40px;
   padding: 15px;
@@ -4174,6 +4174,7 @@ Editing this CSS is for all Custom CSS within the KB */
  border-radius: 100px;
  color: #ffffff;
  align-self: center;
+ background-color: transparent;
  text-decoration: none;
  transition: 0.3s;
  font-size: 0.8rem;
@@ -4182,7 +4183,7 @@ Editing this CSS is for all Custom CSS within the KB */
 .featured-button:hover{
   background-color: #FFF;
   border-color: #FFF;
-  color: #fa935c;
+  color: #778C65;
   text-decoration: none;
 }
 
@@ -4197,10 +4198,10 @@ Editing this CSS is for all Custom CSS within the KB */
 .products-item{
   display: flex;
   align-items: center;
-  border: 1px solid #0d0a47;
+  border: 1px solid $brand_color;
   border-radius: 5px;
   box-sizing: border-box;
-  color: #0d0a47;
+  color: $brand_color;
   flex: 1 0 275px;
   justify-content: center;
   margin: 10px;
@@ -4211,8 +4212,8 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .products-item:hover {
-  border-color: #0d0a47;
-  background-color: #0d0a47;
+  border-color: $brand_color;
+  background-color: $brand_color;
   color: #fff;
   text-decoration:none;
 }
@@ -4338,15 +4339,15 @@ Editing this CSS is for all Custom CSS within the KB */
   width: 48%;
   margin: 1%;
   padding: 0.5rem;
-  border: 1px solid #dfe3ee;
+  border: 1px solid $brand_color;
   border-radius: 0.25rem;
-  color: #0d0a47;
+  color: $brand_color;
   transition: ease all 0.3s;
 }
 
 .cat-section:hover{
-  background-color: #fa935c;
-  border-color: #fa935c;
+  background-color: $brand_color;
+  border-color: $brand_color;
   color: #ffffff;
   text-decoration: none;
 }
@@ -4380,7 +4381,7 @@ Editing this CSS is for all Custom CSS within the KB */
   padding: 0.5rem;
   border: 1px solid #dfe3ee;
   border-radius: 0.25rem;
-  color: #0d0a47;
+  color: $brand_color;
   transition: ease all 0.3s;
 }
 
@@ -4413,17 +4414,17 @@ Editing this CSS is for all Custom CSS within the KB */
 }
 
 .section-sub-section-header{
-  color: #0d0a47;
+  color: $brand_color;
   margin-bottom: 0;
 }
 
 .section-article-header{
   margin-bottom: 0;
-  color: #0d0a47;
+  color: $brand_color;
 }
 
 .section-article-link{
-  color: #0d0a47;
+  color: $brand_color;
   transition: ease all 0.3s;
 }
 
@@ -4435,16 +4436,16 @@ Editing this CSS is for all Custom CSS within the KB */
 .section-article-btn{
   border-radius: 100px;
   background-color: transparent;
-  border: 1px solid #0d0a47;
-  color: #0d0a47;
+  border: 1px solid $brand_color;
+  color: $brand_color;
   font-size: 0.75rem;
   padding: 0.75rem;
   transition: ease all 0.3s;
 }
 
 .section-article-btn:hover{
-  background-color: #0d0a47;
-  border-color: #0d0a47;
+  background-color: $brand_color;
+  border-color: $brand_color;
   color: #fff;
   text-decoration: none;
 }
@@ -4531,7 +4532,7 @@ Editing this CSS is for all Custom CSS within the KB */
 /* ARTICLES */
 
 .user-info > [role="button"]{
-  background-color: #ffffff;
+  
 }
 
 .button, [role="button"]{
@@ -4765,7 +4766,7 @@ Editing this CSS is for all Custom CSS within the KB */
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: $brand_color;
+  background-color: #778C65;
   color: #fff;
   padding: 10px 20px;
 }
