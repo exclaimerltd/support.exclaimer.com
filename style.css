@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: $background_color;
+  background-color: #fff;
   color: $text_color;
   font-family: $text_font;
   font-size: 15px;
@@ -474,7 +474,7 @@ ul {
 
 .nav-wrapper a {
   border: 0;
-  color: $link_color;
+  color: #1B2037;
   display: none;
   font-size: 14px;
   padding: 0 20px 0 0;
@@ -535,7 +535,7 @@ ul {
 
 .user-info > [role="button"] {
   border: 0;
-  color: $link_color;
+  color: #1B2037;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
@@ -548,7 +548,7 @@ ul {
 }
 
 .user-info > [role="button"]::after {
-  color: $link_color;
+  color: #1B2037;
 }
 
 [dir="rtl"] .user-info > [role="button"]::after {
@@ -721,7 +721,7 @@ ul {
 .hero {
   background-image: url($assets-herobg-png);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #0E1934;
   height: 350px;
@@ -4138,7 +4138,7 @@ Editing this CSS is for all Custom CSS within the KB */
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: $brand_color;
+  background-color: #778C65;
   margin-top: -40px;
   margin-bottom: 40px;
   padding: 15px;
@@ -4170,11 +4170,11 @@ Editing this CSS is for all Custom CSS within the KB */
 
 .featured-button{
  padding: 5px 15px;
- border: 1px solid $link_color;
+ border: 1px solid #fff;
  border-radius: 100px;
  color: #ffffff;
  align-self: center;
- background-color: $link_color;
+ background-color: transparent;
  text-decoration: none;
  transition: 0.3s;
  font-size: 0.8rem;
@@ -4183,7 +4183,7 @@ Editing this CSS is for all Custom CSS within the KB */
 .featured-button:hover{
   background-color: #FFF;
   border-color: #FFF;
-  color: $link_color;
+  color: #778C65;
   text-decoration: none;
 }
 
@@ -4532,7 +4532,7 @@ Editing this CSS is for all Custom CSS within the KB */
 /* ARTICLES */
 
 .user-info > [role="button"]{
-  background-color: #EEE8E2;
+  
 }
 
 .button, [role="button"]{
@@ -4766,7 +4766,7 @@ Editing this CSS is for all Custom CSS within the KB */
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: $brand_color;
+  background-color: #778C65;
   color: #fff;
   padding: 10px 20px;
 }
