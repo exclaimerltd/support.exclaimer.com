@@ -1,4 +1,9 @@
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<!-- Redirects - DO NOT REMOVE -->
+<script src="{{asset 'redirects.js'}}"></script>
+<!-- ^^ DO NOT REMOVE ^^ -->
+
 <!-- Google Consent -->
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",tracking_storage:"denied",wait_for_update:500}),dataLayer.push({event:"default_consent"});</script>
 <!-- Font Awesome -->
@@ -11,79 +16,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-J8W9');</script>
 <!-- End Google Tag Manager -->
 
-<!-- Start of Ada Chatbot script -->
+{{!-- <!-- Start of Ada Chatbot script -->
   <script
     id="__ada"
     data-handle="exclaimer"
     src="https://static.ada.support/embed2.js"
   ></script>
-<!-- End of Ada Chatbot script -->
-
-{{!-- <!-- Start of Async Drift Code -->
-<script>
-"use strict";
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('hks2ztkubhse');
-</script>
-<!-- End of Async Drift Code -->
-
-<!-- Redirect Script Import -->
-<script src="{{asset 'redirects.js'}}"></script>
-
-<!-- Start of exclaimersupport Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=edc13bd8-6cb8-4c6e-843b-2aabd6debe04"> </script>
-<!-- End of exclaimersupport Zendesk Widget script --> --}}
-
-{{!-- <script>
-  zE(function() {
-  $zopim(function() {
-  $zopim.livechat.button.hide(); // Hide the Zendesk widget
-  });
-  });
-
-  window.drift.on("conversation:buttonClicked", function(data) {
-  console.log(data);
-  if (data.buttonBody == "Transfer me to Support") {
-  drift.unload();
-  $zopim.livechat.button.show();
-  $zopim.livechat.window.show();
-  $zopim.livechat.say("Hi, there I need support and I came from Drift chat. I can either dump the transcript here or in the notes.");
-  $zopim.livechat.concierge.setName('Chat transferred from Drift');
-  $zopim.livechat.departments.setVisitorDepartment('Support');
-  } else if (data.buttonBody == "Transfer me to Customer Success") {
-  drift.unload();
-  $zopim.livechat.button.show();
-  $zopim.livechat.window.show();
-  $zopim.livechat.say("Hi, there I need Customer Success and I came from Drift chat. I can either dump the transcript here or in the notes.");
-  $zopim.livechat.concierge.setName('Chat transferred from Drift');
-  $zopim.livechat.departments.setVisitorDepartment('Customer Success');
-  }
-  });
-</script> --}}
-
-<script type="text/javascript">
-  zE('webWidget:on', 'chat:end', function() {
-    $zopim.livechat.button.hide()
-    drift.load('hks2ztkubhse');
-  });
-</script>
+<!-- End of Ada Chatbot script --> --}}
